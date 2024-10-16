@@ -9,20 +9,26 @@ enum Style
     Axe
 }
 
-public class WeaponController : MonoBehaviour
+public class WeaponController : MonoBehaviourPun
 {
-    public int damage;
-    public float attackRange;
-    public float attackSweep;
-    public float attackRate;
+    private int damage;
+    private float attackRange;
+    private float attackSweep;
+    private float attackRate;
     private float lastAttackTime;
 
     public LayerMask enemyMask;
     private Style weaponStyle;
 
-    public Animator weaponAnim;
+    private Animator weaponAnim;
 
-    void SetWeapon(string type, int newDamage, float newRange, float newRate, float newSweep, Animator newAnim)
+    private void Start()
+    {
+        weaponAnim = GetComponentInChildren<Animator>();
+    }
+
+    [PunRPC]
+    public void SetWeapon(string type, int newDamage, float newRange, float newRate, float newSweep)
     {
         if(type == "Axe")
         {
@@ -30,14 +36,24 @@ public class WeaponController : MonoBehaviour
             attackSweep = newSweep;
         }
 
-        weaponAnim = newAnim;
         damage = newDamage; 
         attackRange = newRange;
         attackRate = newRate;
     }
 
-    void Attack()
+    public void Attack()
     {
+        //prevents attack from executing if the weapon is not set up
+        if(weaponAnim == null)
+        {
+            return;
+        }
+        //returns if the attack exeeds its rate
+        if(Time.time - lastAttackTime < attackRate)
+        {
+            return;
+        }
+
         Vector3 dir = (Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position)).normalized;
 
         if (weaponStyle == Style.Axe)
@@ -56,5 +72,8 @@ public class WeaponController : MonoBehaviour
                 }
             }
         }
+
+        lastAttackTime = Time.time;
+        weaponAnim.SetTrigger("Attack");
     }
 }

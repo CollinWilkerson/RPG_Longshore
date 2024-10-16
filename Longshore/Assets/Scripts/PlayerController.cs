@@ -17,16 +17,19 @@ public class PlayerController : MonoBehaviourPun
     public bool dead;
 
     [Header("Attack")]
+    private WeaponController weapon;
+    /*
     public int damage;
     public float attackRange;
     public float attackRate;
     private float lastAttackTime;
+    */
 
     [Header("Components")]
-    public Rigidbody2D rig;
+    private Rigidbody2D rig;
     public Player photonPlayer;
-    public SpriteRenderer sr;
-    public Animator weaponAnim;
+    private SpriteRenderer sr;
+    private Animator weaponAnim;
     public HeaderInfo headerInfo;
 
     //local player
@@ -58,6 +61,7 @@ public class PlayerController : MonoBehaviourPun
         rig = gameObject.GetComponent<Rigidbody2D>();
         sr = gameObject.GetComponent<SpriteRenderer>();
         weaponAnim = gameObject.GetComponentInChildren<Animator>();
+        weapon = gameObject.GetComponent<WeaponController>();
     }
 
     private void Update()
@@ -81,12 +85,13 @@ public class PlayerController : MonoBehaviourPun
 
         Move();
 
-        if(Input.GetMouseButtonDown(0) && Time.time - lastAttackTime > attackRate)
+        if(Input.GetMouseButtonDown(0))
         {
-            Attack();
+            weapon.Attack();
         }
     }
 
+    /*
     private void Attack()
     {
         lastAttackTime = Time.time;
@@ -106,6 +111,7 @@ public class PlayerController : MonoBehaviourPun
 
         weaponAnim.SetTrigger("Attack");
     }
+    */
 
     private void Move()
     {
