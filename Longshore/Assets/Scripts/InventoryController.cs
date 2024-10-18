@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class InventoryController : MonoBehaviour
+public class InventoryController : MonoBehaviourPun
 {
     private InventorySlotController[] slots;
     public PlayerController clientPlayer;
@@ -14,6 +14,7 @@ public class InventoryController : MonoBehaviour
     }
 
     //make this an rpc
+    [PunRPC]
     public void AddItem(WeaponData data)
     {
         for(int i = 0; i < slots.Length; i++)
@@ -21,7 +22,7 @@ public class InventoryController : MonoBehaviour
             if(!slots[i].isFilled)
             {
                 slots[i].SetInventorySlot(data);
-                break;
+                return;
             }
         }
         Debug.Log("Inventory Full");

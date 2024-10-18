@@ -11,26 +11,26 @@ public class InventorySlotController : MonoBehaviour
 {
     
     private WeaponData inventoryWeapon;
-    private Image sr;
+    private Image image;
     public bool isFilled = false;
 
     private void Awake()
     {
-        sr = gameObject.GetComponent<Image>();
+        image = gameObject.GetComponent<Image>();
     }
 
     public void OnItemSelect()
     {
         PlayerController player = FindFirstObjectByType<InventoryController>().clientPlayer;
-        player.weapon.photonView.RPC("SetWeapon", player.photonPlayer, inventoryWeapon); //this doesnt need to be an rpc
+        player.weapon.SetWeapon(inventoryWeapon);
     }
 
     //stores the data and changes the sprite
     public void SetInventorySlot(WeaponData newWeapon)
     {
         inventoryWeapon = newWeapon;
-        sr.color = Color.white;
-        sr.sprite = inventoryWeapon.weaponSprite;
+        image.color = Color.white;
+        image.sprite = inventoryWeapon.weaponSprite;
         isFilled = true;
     }
 }

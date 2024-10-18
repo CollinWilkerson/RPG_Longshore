@@ -42,7 +42,7 @@ public class Pickup : MonoBehaviourPun
             else if(type == PickupType.Weapon)
             {
                 WeaponData data = gameObject.GetComponent<WeaponData>();
-                inventory.AddItem(data);
+                inventory.photonView.RPC("AddItem", player.photonPlayer,data);
             }
 
             PhotonNetwork.Destroy(gameObject);
