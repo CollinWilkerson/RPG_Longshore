@@ -37,7 +37,7 @@ public class Pickup : MonoBehaviourPun
             {
                 WeaponData data = gameObject.GetComponent<WeaponData>();
                 WeaponController playerWeapon = collision.gameObject.GetComponent<WeaponController>();
-                playerWeapon.photonView.RPC("SetWeapon", player.photonPlayer, data.weaponType, data.damage, data.attackRange, data.attackRate, data.attackSweep);
+                playerWeapon.photonView.RPC("SetWeapon", player.photonPlayer, data);
             }
 
             PhotonNetwork.Destroy(gameObject);

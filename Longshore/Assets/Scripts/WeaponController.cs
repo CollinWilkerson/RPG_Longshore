@@ -41,6 +41,20 @@ public class WeaponController : MonoBehaviourPun
         attackRate = newRate;
     }
 
+    [PunRPC]
+    public void SetWeapon(WeaponData data)
+    {
+        if (data.weaponType == "Axe")
+        {
+            weaponStyle = Style.Axe;
+            attackSweep = data.attackSweep;
+        }
+
+        damage = data.damage;
+        attackRange = data.attackRange;
+        attackRate = data.attackRate;
+    }
+
     public void Attack()
     {
         //prevents attack from executing if the weapon is not set up

@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviourPun
     private SpriteRenderer sr;
     private Animator weaponAnim;
     public HeaderInfo headerInfo;
+    public GameObject inventory;
 
     //local player
     public static PlayerController me;
@@ -64,6 +65,12 @@ public class PlayerController : MonoBehaviourPun
         weapon = gameObject.GetComponent<WeaponController>();
     }
 
+    private void Start()
+    {
+        inventory = GameObject.FindWithTag("Inventory");
+        inventory.SetActive(false);
+    }
+
     private void Update()
     {
         if (!photonView.IsMine)
@@ -88,6 +95,11 @@ public class PlayerController : MonoBehaviourPun
         if(Input.GetMouseButtonDown(0))
         {
             weapon.Attack();
+        }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            inventory.SetActive(!inventory.activeSelf);
         }
     }
 
