@@ -19,6 +19,7 @@ public class WeaponController : MonoBehaviourPun
 
     public LayerMask enemyMask;
     private Style weaponStyle;
+    public SpriteRenderer weaponSR;
 
     private Animator weaponAnim;
 
@@ -53,6 +54,7 @@ public class WeaponController : MonoBehaviourPun
         damage = data.damage;
         attackRange = data.attackRange;
         attackRate = data.attackRate;
+        weaponSR.sprite = data.weaponSprite;
     }
 
     public void Attack()

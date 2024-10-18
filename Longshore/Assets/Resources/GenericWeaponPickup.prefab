@@ -164,9 +164,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: Bane
   weaponType: Axe
-  damage: 3
+  weaponSprite: {fileID: -309388488, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  damage: 1
   attackRate: 1
-  attackRange: 3
+  attackRange: 1
   attackSweep: 60
 --- !u!114 &8116317299566634581
 MonoBehaviour:

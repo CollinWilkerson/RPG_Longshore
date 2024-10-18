@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviourPun
     public bool dead;
 
     [Header("Attack")]
-    private WeaponController weapon;
+    public WeaponController weapon;
     /*
     public int damage;
     public float attackRange;
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviourPun
     private SpriteRenderer sr;
     private Animator weaponAnim;
     public HeaderInfo headerInfo;
-    public GameObject inventory;
+    private GameObject inventory;
 
     //local player
     public static PlayerController me;

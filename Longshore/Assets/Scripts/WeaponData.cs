@@ -11,6 +11,7 @@ public class WeaponData : MonoBehaviour
     [Header("Type")]
     public string weaponName;
     public string weaponType;
+    public Sprite weaponSprite;
 
     [Header("Stats")]
     public int damage;
