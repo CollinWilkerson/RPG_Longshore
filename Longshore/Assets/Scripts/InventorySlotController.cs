@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// this contols the buttons in the inventroy
@@ -8,20 +9,20 @@ using UnityEngine;
 /// </summary>
 public class InventorySlotController : MonoBehaviour
 {
-    //I need a way to dynamically set the player for this client
-    public PlayerController player;
+    
     private WeaponData inventoryWeapon;
-    private SpriteRenderer sr;
+    private Image sr;
     public bool isFilled = false;
 
     private void Awake()
     {
-        sr = gameObject.GetComponent<SpriteRenderer>();
+        sr = gameObject.GetComponent<Image>();
     }
 
     public void OnItemSelect()
     {
-        player.weapon.SetWeapon(inventoryWeapon);
+        PlayerController player = FindFirstObjectByType<InventoryController>().clientPlayer;
+        player.weapon.photonView.RPC("SetWeapon", player.photonPlayer, inventoryWeapon); //this doesnt need to be an rpc
     }
 
     //stores the data and changes the sprite

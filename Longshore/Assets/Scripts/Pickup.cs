@@ -14,6 +14,12 @@ public class Pickup : MonoBehaviourPun
 {
     public PickupType type;
     public int value;
+    public InventoryController inventory;
+
+    private void Start()
+    {
+        inventory = FindFirstObjectByType<InventoryController>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -36,8 +42,7 @@ public class Pickup : MonoBehaviourPun
             else if(type == PickupType.Weapon)
             {
                 WeaponData data = gameObject.GetComponent<WeaponData>();
-                WeaponController playerWeapon = collision.gameObject.GetComponent<WeaponController>();
-                playerWeapon.photonView.RPC("SetWeapon", player.photonPlayer, data);
+                inventory.AddItem(data);
             }
 
             PhotonNetwork.Destroy(gameObject);
