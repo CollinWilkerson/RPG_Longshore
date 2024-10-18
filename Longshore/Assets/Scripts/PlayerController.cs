@@ -99,6 +99,7 @@ public class PlayerController : MonoBehaviourPun
 
         if (Input.GetKeyDown(KeyCode.I))
         {
+            //pass player to menu
             inventory.SetActive(!inventory.activeSelf);
         }
     }
