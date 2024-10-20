@@ -10,7 +10,7 @@ public class InventoryController : MonoBehaviourPun
 
     private void Start()
     {
-        slots = FindObjectsByType<InventorySlotController>(0);
+        slots = gameObject.GetComponentsInChildren<InventorySlotController>();
     }
 
     //make this an rpc
