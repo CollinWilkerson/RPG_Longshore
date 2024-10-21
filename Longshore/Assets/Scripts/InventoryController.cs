@@ -7,9 +7,11 @@ public class InventoryController : MonoBehaviourPun
 {
     private InventorySlotController[] slots;
     public PlayerController clientPlayer;
+    public WeaponDisplay DataDisplay;
 
     private void Start()
     {
+        DataDisplay = FindFirstObjectByType<WeaponDisplay>();
         slots = gameObject.GetComponentsInChildren<InventorySlotController>();
     }
 

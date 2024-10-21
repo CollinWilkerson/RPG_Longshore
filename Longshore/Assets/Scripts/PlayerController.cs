@@ -100,7 +100,9 @@ public class PlayerController : MonoBehaviourPun
         if (Input.GetKeyDown(KeyCode.I))
         {
             //pass player to menu
-            inventory.GetComponent<InventoryController>().SetClient(this);
+            InventoryController controller = inventory.GetComponent<InventoryController>();
+            controller.SetClient(this);
+            //controller.mouseOver.SetActive(false);
             inventory.SetActive(!inventory.activeSelf);
         }
     }

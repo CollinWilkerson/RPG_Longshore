@@ -18,4 +18,18 @@ public class WeaponData : MonoBehaviour
     public float attackRate;
     public float attackRange;
     public float attackSweep;
+    public float goldValue;
+
+    /*
+    public void CopyData(WeaponData data)
+    {
+        weaponName = data.weaponName;
+        weaponType = data.weaponType;
+        weaponSprite = data.weaponSprite;
+        damage = data.damage;
+        attackRate = data.attackRate;
+        attackRange = data.attackRange;
+        attackSweep = data.attackSweep;
+    }
+    */
 }
