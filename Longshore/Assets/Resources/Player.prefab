@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7881699017019776932}
   - component: {fileID: 4820557681335651661}
   - component: {fileID: 1337592175065926505}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -178,6 +178,7 @@ MonoBehaviour:
   dead: 0
   weapon: {fileID: 0}
   headerInfo: {fileID: 4136613054260602319}
+  inventory: {fileID: 0}
 --- !u!114 &7881699017019776932
 MonoBehaviour:
   m_ObjectHideFlags: 0

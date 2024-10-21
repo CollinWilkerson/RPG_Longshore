@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviourPun
     private SpriteRenderer sr;
     private Animator weaponAnim;
     public HeaderInfo headerInfo;
-    private GameObject inventory;
+    public GameObject inventory;
 
     //local player
     public static PlayerController me;
@@ -206,5 +206,14 @@ public class PlayerController : MonoBehaviourPun
 
         //ui
         GameUI.instance.UpdateGoldText(gold);
+    }
+
+    public bool IsClientPlayer()
+    {
+        if (photonView.IsMine)
+        {
+            return true;
+        }
+        return false;
     }
 }

@@ -18,7 +18,7 @@ public class WeaponData : MonoBehaviour
     public float attackRate;
     public float attackRange;
     public float attackSweep;
-    public float goldValue;
+    public int goldValue;
 
     /*
     public void CopyData(WeaponData data)

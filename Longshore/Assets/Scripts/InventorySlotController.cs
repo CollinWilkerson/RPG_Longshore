@@ -20,6 +20,7 @@ public class InventorySlotController : MonoBehaviour//, IPointerEnterHandler, IP
     {
         image = gameObject.GetComponent<Image>();
         inventory = FindFirstObjectByType<InventoryController>();
+        SetInventorySlot(gameObject.GetComponent<WeaponData>());
     }
 
     public void OnItemSelect()
@@ -32,15 +33,23 @@ public class InventorySlotController : MonoBehaviour//, IPointerEnterHandler, IP
         */
         if (!inventory.vendorInventory)
         {
-            PlayerController player = inventory.clientPlayer;
-            player.weapon.SetWeapon(inventoryWeapon);
+            inventory.clientPlayer.weapon.SetWeapon(inventoryWeapon);
             inventory.DataDisplay.UpdateIcon(inventoryWeapon);
+        }
+        else if(inventoryWeapon.goldValue <= inventory.clientPlayer.gold)
+        {
+            inventory.clientPlayer.inventory.GetComponent<InventoryController>().AddItem(inventoryWeapon);
+            inventory.clientPlayer.gold -= inventoryWeapon.goldValue;
         }
     }
 
     //stores the data and changes the sprite
     public void SetInventorySlot(WeaponData newWeapon)
     {
+        if(newWeapon == null)
+        {
+            return;
+        }
         inventoryWeapon = newWeapon;
         image.color = Color.white;
         image.sprite = inventoryWeapon.weaponSprite;

@@ -1234,6 +1234,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcScreen: {fileID: 220713959}
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &404641665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,6 +1339,10 @@ PrefabInstance:
     - target: {fileID: 2251487767956478386, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511869854174556228, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3307984163182878496, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1584,7 +1591,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2511869854174556228, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 570010740}
   m_SourcePrefab: {fileID: 100100000, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
 --- !u!224 &419010160 stripped
 RectTransform:
@@ -2356,6 +2366,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1 &570010738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2511869854174556228, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+  m_PrefabInstance: {fileID: 419010159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &570010740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570010738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: Butcher
+  weaponType: Axe
+  weaponSprite: {fileID: -1099742973, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  damage: 50
+  attackRate: 0.5
+  attackRange: 3
+  attackSweep: 180
+  goldValue: 10
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
