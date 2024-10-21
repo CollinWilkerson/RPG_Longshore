@@ -3,17 +3,28 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+public enum NPCType
+{
+    Sell,
+    Talk
+}
+
 public class NPCController : MonoBehaviour
 {
     private bool inRange;
     public GameObject npcScreen;
+    //public Sprite portrait;
     private InventoryController npcItems;
     public LayerMask playerMask;
     private PlayerController client;
+    public NPCType type;
 
     private void Awake()
     {
-        npcItems = npcScreen.GetComponentInChildren<InventoryController>();
+        if (type == NPCType.Sell)
+        {
+            npcItems = npcScreen.GetComponentInChildren<InventoryController>();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -30,6 +41,7 @@ public class NPCController : MonoBehaviour
     {
         if(inRange && Input.GetKeyDown(KeyCode.E) && !npcScreen.activeSelf)
         {
+            //FindAnyObjectByType<PortraitController>().SetPortrait(portrait);
             npcScreen.SetActive(true);
             if (client == null)
             {
@@ -43,7 +55,10 @@ public class NPCController : MonoBehaviour
                     }
                 }
             }
-            npcItems.SetClient(client);
+            if (type == NPCType.Sell)
+            {
+                npcItems.SetClient(client);
+            }
         }
         else if (!inRange)
         {

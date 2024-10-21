@@ -123,7 +123,6 @@ public class Menu : MonoBehaviourPunCallbacks, ILobbyCallbacks
      * LOBBY SCREEN FUNCTIONS *
      **************************/
 
-    //ask Slease about override keyword
     public override void OnJoinedRoom()
     {
         SetScreen(lobbyScreen);
@@ -191,7 +190,7 @@ public class Menu : MonoBehaviourPunCallbacks, ILobbyCallbacks
             Button buttonComp = button.GetComponent<Button>();
             string roomName = roomList[x].Name;
             buttonComp.onClick.RemoveAllListeners();
-            buttonComp.onClick.AddListener(() => { OnJoinRoomButton(roomName); }); //what is this, probably makes it so it triggers on click but like what
+            buttonComp.onClick.AddListener(() => { OnJoinRoomButton(roomName); });
         }
     }
 
