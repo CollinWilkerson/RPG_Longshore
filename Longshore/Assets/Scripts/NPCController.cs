@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class NPCController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private bool inRange;
+    public GameObject npcScreen;
+    private InventoryController npcItems;
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        inRange = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        
+        inRange = false;
+    }
+
+    private void Update()
+    {
+        if(inRange && Input.GetKeyDown(KeyCode.E) && !npcScreen.activeSelf)
+        {
+            npcScreen.SetActive(true);
+        }
+        else if (!inRange)
+        {
+            npcScreen.SetActive(false);
+        }
+        else if (npcScreen.activeSelf && Input.GetKeyDown(KeyCode.E))
+        {
+            npcScreen.SetActive(false);
+        }
     }
 }
