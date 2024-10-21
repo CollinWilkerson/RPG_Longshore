@@ -8,6 +8,7 @@ public class InventoryController : MonoBehaviourPun
     private InventorySlotController[] slots;
     public PlayerController clientPlayer;
     public WeaponDisplay DataDisplay;
+    public bool vendorInventory;
 
     private void Start()
     {

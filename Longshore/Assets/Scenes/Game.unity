@@ -5728,6 +5728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clientPlayer: {fileID: 0}
   DataDisplay: {fileID: 0}
+  vendorInventory: 1
 --- !u!114 &1360995006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7079,6 +7080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clientPlayer: {fileID: 0}
   DataDisplay: {fileID: 0}
+  vendorInventory: 0
 --- !u!114 &1695087106
 MonoBehaviour:
   m_ObjectHideFlags: 0

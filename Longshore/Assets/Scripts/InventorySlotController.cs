@@ -30,9 +30,12 @@ public class InventorySlotController : MonoBehaviour//, IPointerEnterHandler, IP
             return;
         }
         */
-        PlayerController player = inventory.clientPlayer;
-        player.weapon.SetWeapon(inventoryWeapon);
-        inventory.DataDisplay.UpdateIcon(inventoryWeapon);
+        if (!inventory.vendorInventory)
+        {
+            PlayerController player = inventory.clientPlayer;
+            player.weapon.SetWeapon(inventoryWeapon);
+            inventory.DataDisplay.UpdateIcon(inventoryWeapon);
+        }
     }
 
     //stores the data and changes the sprite
