@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviourPun
     public string enemyName;
     public float moveSpeed;
 
+    public bool isBoss;
     public int curHp;
     public int maxHp;
 
@@ -30,8 +31,8 @@ public class Enemy : MonoBehaviourPun
 
     [Header("Components")]
     public HeaderInfo healthBar;
-    public SpriteRenderer sr;
-    public Rigidbody2D rig;
+    private SpriteRenderer sr;
+    private Rigidbody2D rig;
 
     private void Awake()
     {
@@ -41,6 +42,12 @@ public class Enemy : MonoBehaviourPun
 
     private void Start()
     {
+        //scales boss health based on players in lobby
+        if (isBoss)
+        {
+            maxHp *= PhotonNetwork.PlayerList.Length;
+            curHp = maxHp;
+        }
         healthBar.Initialize(enemyName, maxHp);
     }
 

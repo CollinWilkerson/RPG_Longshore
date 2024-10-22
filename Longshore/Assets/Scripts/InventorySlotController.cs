@@ -40,6 +40,7 @@ public class InventorySlotController : MonoBehaviour//, IPointerEnterHandler, IP
         {
             inventory.clientPlayer.inventory.GetComponent<InventoryController>().AddItem(inventoryWeapon);
             inventory.clientPlayer.gold -= inventoryWeapon.goldValue;
+            GameUI.instance.UpdateGoldText(inventory.clientPlayer.gold);
         }
     }
 
