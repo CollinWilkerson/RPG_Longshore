@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.10" tiledversion="1.11.0" name="background" tilewidth="32" tileheight="32" tilecount="1504" columns="32">
  <editorsettings>
-  <export target="background.tsx" format="tsx"/>
+  <export target="" format="tsx"/>
  </editorsettings>
  <image source="background.png" width="1024" height="1504"/>
  <tile id="91">
@@ -78,6 +78,11 @@
  <tile id="803">
   <objectgroup draworder="index" id="2">
    <object id="1" x="0.875" y="22" width="29.625" height="8.625"/>
+  </objectgroup>
+ </tile>
+ <tile id="808">
+  <objectgroup draworder="index" id="3">
+   <object id="2" x="-2.625" y="-2.375" width="37.75" height="36.375"/>
   </objectgroup>
  </tile>
  <tile id="811">
