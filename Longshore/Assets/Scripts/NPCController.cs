@@ -18,6 +18,7 @@ public class NPCController : MonoBehaviour
     public LayerMask playerMask;
     private PlayerController client;
     public NPCType type;
+    public GameObject toolTip;
 
     private void Awake()
     {
@@ -39,6 +40,10 @@ public class NPCController : MonoBehaviour
 
     private void Update()
     {
+        if (inRange)
+        {
+            toolTip.SetActive(true);
+        }
         if(inRange && Input.GetKeyDown(KeyCode.E) && !npcScreen.activeSelf)
         {
             //FindAnyObjectByType<PortraitController>().SetPortrait(portrait);
@@ -62,6 +67,7 @@ public class NPCController : MonoBehaviour
         }
         else if (!inRange)
         {
+            toolTip.SetActive(false);
             npcScreen.SetActive(false);
         }
         else if (npcScreen.activeSelf && Input.GetKeyDown(KeyCode.E))
