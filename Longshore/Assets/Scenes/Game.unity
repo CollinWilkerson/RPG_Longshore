@@ -1270,6 +1270,8 @@ MonoBehaviour:
     m_Bits: 256
   type: 1
   toolTip: {fileID: 1962764318}
+  topButton: {fileID: 0}
+  bottomButton: {fileID: 0}
 --- !u!58 &313534957
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1592,6 +1594,8 @@ MonoBehaviour:
     m_Bits: 256
   type: 0
   toolTip: {fileID: 1445374036600539426}
+  topButton: {fileID: 0}
+  bottomButton: {fileID: 0}
 --- !u!1 &400432735
 GameObject:
   m_ObjectHideFlags: 0

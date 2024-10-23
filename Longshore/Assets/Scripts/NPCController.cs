@@ -1,12 +1,14 @@
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum NPCType
 {
-    Sell,
-    Talk
+    Merchant,
+    Apothecary
 }
 
 public class NPCController : MonoBehaviour
@@ -20,9 +22,12 @@ public class NPCController : MonoBehaviour
     public NPCType type;
     public GameObject toolTip;
 
+    public Button topButton;
+    public Button bottomButton;
+
     private void Awake()
     {
-        if (type == NPCType.Sell)
+        if (type == NPCType.Merchant)
         {
             npcItems = npcScreen.GetComponentInChildren<InventoryController>();
         }
@@ -60,7 +65,7 @@ public class NPCController : MonoBehaviour
                     }
                 }
             }
-            if (type == NPCType.Sell)
+            if (type == NPCType.Merchant)
             {
                 npcItems.SetClient(client);
             }
@@ -74,6 +79,14 @@ public class NPCController : MonoBehaviour
         {
             npcScreen.SetActive(false);
         }
+    }
+
+    public void HealPlayer()
+    {
+        
+        client.gold = Mathf.Clamp(client.gold - (client.maxHp - client.curHp) / 10, 0, client.gold);
+        GameUI.instance.UpdateGoldText(client.gold);
+        client.photonView.RPC("Heal", RpcTarget.All, client.maxHp);
     }
 
     
