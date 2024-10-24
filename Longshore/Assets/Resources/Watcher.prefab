@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6574184654356791988}
   - component: {fileID: 6069823546720704626}
   m_Layer: 7
-  m_Name: Crab
+  m_Name: Watcher
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 1393373881
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 45eb9554af5273a44b55a45318165684, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 402ad562055fc7948bfb72112d09e1cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -155,7 +155,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.7, y: 0.875}
+  m_Size: {x: 1.0857188, y: 1.0857188}
   m_Direction: 0
 --- !u!114 &8847210435380104032
 MonoBehaviour:
@@ -169,17 +169,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f5da5b2d9ee3f45a9f87537569fb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: Crab
-  moveSpeed: 4
+  enemyName: Watcher
+  moveSpeed: 2
   isBoss: 0
-  curHp: 20
-  maxHp: 20
+  curHp: 50
+  maxHp: 50
   chaseRange: 5
-  attackRange: 1.5
-  playerDetectRate: 0.2
+  attackRange: 5
+  playerDetectRate: 0.4
   objectToSpawnOnDeath: GoldPickup
-  damage: 15
-  attackRate: 0.05
+  damage: 1
+  attackRate: 3
   healthBar: {fileID: 6616562060604637191}
 --- !u!114 &8598374024770353443
 MonoBehaviour:
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   armorSprite: {fileID: 0}
-  defense: 1
+  defense: 5
   goldValue: 0
   HelmetSR: {fileID: 0}
   helmetDefense: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   ChestSR: {fileID: 0}
   chestDefense: 0
   healthRegen: 0
-  damageReflect: 0
+  damageReflect: 0.1
   bootsSR: {fileID: 0}
   bootsDefense: 0
   bootsSpeed: 1

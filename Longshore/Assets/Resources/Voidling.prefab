@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6574184654356791988}
   - component: {fileID: 6069823546720704626}
   m_Layer: 7
-  m_Name: Crab
+  m_Name: Voidling
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 1393373881
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 45eb9554af5273a44b55a45318165684, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 61f82ad327be4d14794d58a2817dbd19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -169,17 +169,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f5da5b2d9ee3f45a9f87537569fb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: Crab
-  moveSpeed: 4
+  enemyName: Voidling
+  moveSpeed: 10
   isBoss: 0
-  curHp: 20
-  maxHp: 20
-  chaseRange: 5
-  attackRange: 1.5
+  curHp: 10
+  maxHp: 10
+  chaseRange: 8
+  attackRange: 1
   playerDetectRate: 0.2
   objectToSpawnOnDeath: GoldPickup
-  damage: 15
-  attackRate: 0.05
+  damage: 20
+  attackRate: 0.01
   healthBar: {fileID: 6616562060604637191}
 --- !u!114 &8598374024770353443
 MonoBehaviour:
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   armorSprite: {fileID: 0}
-  defense: 1
+  defense: 2
   goldValue: 0
   HelmetSR: {fileID: 0}
   helmetDefense: 0

@@ -176,7 +176,7 @@ MonoBehaviour:
   maxHp: 10
   chaseRange: 2
   attackRange: 1
-  playerDetectRate: 0.2
+  playerDetectRate: 0.4
   objectToSpawnOnDeath: SilverPickup
   damage: 10
   attackRate: 0.05
