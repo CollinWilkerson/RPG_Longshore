@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public enum NPCType
 {
@@ -14,16 +15,26 @@ public enum NPCType
 public class NPCController : MonoBehaviour
 {
     private bool inRange;
+
+    [Header("NPC Inventory")]
     public GameObject npcScreen;
-    //public Sprite portrait;
     private InventoryController npcItems;
+    //top button
+    public Button topButton;
+    private TextMeshProUGUI topButtonText;
+    //bottom button
+    public Button bottomButton;
+    private TextMeshProUGUI bottomButtonText;
+
+    public TextMeshProUGUI textBox;
+    private int interactionLevel;
+    private bool interactionEnded;
+
     public LayerMask playerMask;
     private PlayerController client;
     public NPCType type;
     public GameObject toolTip;
 
-    public Button topButton;
-    public Button bottomButton;
 
     private void Awake()
     {
@@ -31,6 +42,9 @@ public class NPCController : MonoBehaviour
         {
             npcItems = npcScreen.GetComponentInChildren<InventoryController>();
         }
+
+        topButtonText = topButton.GetComponentInChildren<TextMeshProUGUI>();
+        bottomButtonText = bottomButton.GetComponentInChildren<TextMeshProUGUI>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -45,13 +59,14 @@ public class NPCController : MonoBehaviour
 
     private void Update()
     {
+        //controlls the ability to interact with NPCs and pull up their interaction screen
         if (inRange)
         {
             toolTip.SetActive(true);
         }
-        if(inRange && Input.GetKeyDown(KeyCode.E) && !npcScreen.activeSelf)
+        if (inRange && Input.GetKeyDown(KeyCode.E) && !npcScreen.activeSelf)
         {
-            //FindAnyObjectByType<PortraitController>().SetPortrait(portrait);
+
             npcScreen.SetActive(true);
             if (client == null)
             {
@@ -61,7 +76,7 @@ public class NPCController : MonoBehaviour
                     if (collider.gameObject.GetComponent<PlayerController>().IsClientPlayer())
                     {
                         client = collider.gameObject.GetComponent<PlayerController>();
-                        Debug.Log("Client Set: " + client);
+
                     }
                 }
             }
@@ -69,6 +84,11 @@ public class NPCController : MonoBehaviour
             {
                 npcItems.SetClient(client);
             }
+
+            interactionLevel = 1; //reset to the first interaction
+            interactionEnded = false;
+            topButton.interactable = true;
+            bottomButton.interactable = true;
         }
         else if (!inRange)
         {
@@ -78,6 +98,49 @@ public class NPCController : MonoBehaviour
         else if (npcScreen.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
             npcScreen.SetActive(false);
+        }
+
+        //dialouge progression - uses a bianary tree to store text
+        if (!interactionEnded)
+        {
+            if (type == NPCType.Apothecary)
+            {
+                if (interactionLevel == 1)//initial
+                {
+                    textBox.text = "Apothecary: All banged up?";
+
+                    topButtonText.text = "Heal (" + (client.maxHp - client.curHp) / 10 + " gold)";
+                    bottomButtonText.text = "Who're you?";
+                }
+                else if (interactionLevel == 2)//top - heal
+                {
+                    if (client.gold >= (client.maxHp - client.curHp) / 10)
+                    {
+                        textBox.text = "Apothecary: All better, be careful out there";
+                    }
+                    else if (client.gold == 0)
+                    {
+                        textBox.text = "Apothecary: Seriously, You've got nothing? I can fix you up but " +
+                            "I can't make you any better at this.";
+                    }
+                    else
+                    {
+                        textBox.text = "Apothecary: I'll take what you've got. Try to do better before you " +
+                            "get hurt again.";
+                    }
+                    HealPlayer();
+
+                    //end of dialoge path
+                    EndDialouge();
+                }
+                else if(interactionLevel == 3)//bottom - Who're you?
+                {
+                    textBox.text = "Apothecary: I have the pleasure of being the only doctor in all of" +
+                        "longshore. Not that I have many patients. most people who come here go" +
+                        "crazy before long. We call them the Lost.";
+                    EndDialouge();
+                }
+            }
         }
     }
 
@@ -89,5 +152,21 @@ public class NPCController : MonoBehaviour
         client.photonView.RPC("Heal", RpcTarget.All, client.maxHp);
     }
 
-    
+    public void TopOption()
+    {
+        interactionLevel *= 2; //advances the dialoge
+    }
+    public void BottomOption()
+    {
+        interactionLevel *= 2;
+        interactionLevel++; //advances the dialoge
+    }
+    private void EndDialouge()
+    {
+        topButton.interactable = false;
+        topButtonText.text = "";
+        bottomButton.interactable = false;
+        bottomButtonText.text = "";
+        interactionEnded = true;
+    }
 }
