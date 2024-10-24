@@ -197,13 +197,16 @@ MonoBehaviour:
   armorSprite: {fileID: 0}
   defense: 1
   goldValue: 0
-  bootsDefense: 0
-  bootsSpeed: 1
+  HelmetSR: {fileID: 0}
   helmetDefense: 0
   helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
   chestDefense: 0
   healthRegen: 0
   damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
 --- !u!114 &6574184654356791988
 MonoBehaviour:
   m_ObjectHideFlags: 0

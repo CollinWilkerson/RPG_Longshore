@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviourPun
 
         Move();
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButton(0))
         {
             weapon.Attack();
         }

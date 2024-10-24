@@ -10,20 +10,25 @@ public enum ArmorType
 
 public class ArmorData : MonoBehaviour
 {
+    [Header("General")]
     public ArmorType type;
     public Sprite armorSprite;
     public int defense = 0;
     public int goldValue;
-
-    public int bootsDefense = 0;
-    public float bootsSpeed = 1;
-
+    [Header("Helmet")]
+    public SpriteRenderer HelmetSR;
     public int helmetDefense = 0;
     public float helmetDamgeBoost = 1;
-
+    [Header("Chest")]
+    public SpriteRenderer ChestSR;
     public int chestDefense = 0;
     public float healthRegen = 0;
     public float damageReflect = 0f;
+    [Header("Boots")]
+    public SpriteRenderer bootsSR;
+    public int bootsDefense = 0;
+    public float bootsSpeed = 1;
+    
 
     public void GetChestArmor(ArmorData data)
     {
@@ -34,6 +39,13 @@ public class ArmorData : MonoBehaviour
         type = ArmorType.chestplate;
 
         defense = chestDefense + bootsDefense + helmetDefense;
+
+        if (ChestSR == null)
+        {
+            return;
+        }
+
+        ChestSR.sprite = data.armorSprite;
     }
 
     public void GetBoots(ArmorData data)
@@ -44,6 +56,13 @@ public class ArmorData : MonoBehaviour
         type = ArmorType.boots;
 
         defense = chestDefense + bootsDefense + helmetDefense;
+
+        if (bootsSR == null)
+        {
+            return;
+        }
+
+        bootsSR.sprite = data.armorSprite;
     }
     public void GetHelmet(ArmorData data)
     {
@@ -53,5 +72,12 @@ public class ArmorData : MonoBehaviour
         type = ArmorType.helmet;
 
         defense = chestDefense + bootsDefense + helmetDefense;
+
+        if (HelmetSR == null)
+        {
+            return;
+        }
+
+        HelmetSR.sprite = data.armorSprite;
     }
 }
