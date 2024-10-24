@@ -8807,7 +8807,7 @@ TextureImporter:
       name: Characters_414
       rect:
         serializedVersion: 2
-        x: 170
+        x: 171
         y: 33
         width: 16
         height: 16
@@ -8828,7 +8828,7 @@ TextureImporter:
       name: Characters_415
       rect:
         serializedVersion: 2
-        x: 187
+        x: 188
         y: 33
         width: 16
         height: 16
@@ -8849,12 +8849,12 @@ TextureImporter:
       name: Characters_416
       rect:
         serializedVersion: 2
-        x: 204
+        x: 205
         y: 33
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.75260925, y: 0.5000005}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8870,7 +8870,7 @@ TextureImporter:
       name: Characters_417
       rect:
         serializedVersion: 2
-        x: 221
+        x: 222
         y: 33
         width: 16
         height: 16
@@ -8891,7 +8891,7 @@ TextureImporter:
       name: Characters_418
       rect:
         serializedVersion: 2
-        x: 238
+        x: 239
         y: 33
         width: 16
         height: 16
@@ -8912,7 +8912,7 @@ TextureImporter:
       name: Characters_419
       rect:
         serializedVersion: 2
-        x: 255
+        x: 256
         y: 33
         width: 16
         height: 16
@@ -8933,7 +8933,7 @@ TextureImporter:
       name: Characters_420
       rect:
         serializedVersion: 2
-        x: 272
+        x: 273
         y: 33
         width: 16
         height: 16
@@ -8954,7 +8954,7 @@ TextureImporter:
       name: Characters_421
       rect:
         serializedVersion: 2
-        x: 289
+        x: 290
         y: 33
         width: 16
         height: 16
