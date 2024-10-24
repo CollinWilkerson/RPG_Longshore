@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
+
+//enum for what type of item it is then switch that in the onitemselect
 
 /// <summary>
 /// this contols the buttons in the inventroy
 /// should be placed on the sprite in the button
 /// </summary>
-public class InventorySlotController : MonoBehaviour//, IPointerEnterHandler, IPointerExitHandler
+public class InventorySlotController : MonoBehaviour
 {
     
     private WeaponData inventoryWeapon;
@@ -33,6 +34,8 @@ public class InventorySlotController : MonoBehaviour//, IPointerEnterHandler, IP
         */
         if (!inventory.vendorInventory)
         {
+            //photon is not a fan of sprites over the network
+            //could fix with a sprite dictionary, no time
             inventory.clientPlayer.weapon.SetWeapon(inventoryWeapon);
             inventory.DataDisplay.UpdateIcon(inventoryWeapon);
         }

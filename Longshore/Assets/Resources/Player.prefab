@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 100277052624846439}
   - component: {fileID: 8998555155587225380}
   - component: {fileID: 7881699017019776932}
+  - component: {fileID: 6840336827182062466}
   - component: {fileID: 4820557681335651661}
   - component: {fileID: 1337592175065926505}
   m_Layer: 8
@@ -195,6 +196,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   weaponSR: {fileID: 3643643600616612690}
+--- !u!114 &6840336827182062466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443394698022485924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defense: 0
+  healthRegen: 0
+  damageReflect: 0
 --- !u!114 &4820557681335651661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,7 +325,7 @@ SpriteRenderer:
   m_SortingLayerID: 1916761409
   m_SortingLayer: 4
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1109819250, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -317,7 +333,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &8630571540478184207

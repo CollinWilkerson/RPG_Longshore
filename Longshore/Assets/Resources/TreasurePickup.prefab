@@ -161,4 +161,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   value: 500
+  perPlayer: 1
   inventory: {fileID: 0}

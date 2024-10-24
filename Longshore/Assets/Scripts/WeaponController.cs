@@ -22,9 +22,11 @@ public class WeaponController : MonoBehaviourPun
     public SpriteRenderer weaponSR;
 
     private Animator weaponAnim;
+    private PlayerController player;
 
     private void Start()
     {
+        player = GetComponent<PlayerController>();
         weaponAnim = GetComponentInChildren<Animator>();
     }
 
@@ -57,6 +59,12 @@ public class WeaponController : MonoBehaviourPun
         weaponSR.sprite = data.weaponSprite;
     }
 
+    [PunRPC]
+    public void NetworkChangeSprite(Sprite s)
+    {
+        weaponSR.sprite = s;
+    }
+
     public void Attack()
     {
         //prevents attack from executing if the weapon is not set up
@@ -84,7 +92,7 @@ public class WeaponController : MonoBehaviourPun
                 if (Vector2.Angle(dir, directionToEnemy) < attackSweep / 2)
                 {
                     //not checking obstructions for now, range should be too low anyway
-                    enemy.GetComponent<Enemy>().photonView.RPC("TakeDamage", RpcTarget.MasterClient, damage);
+                    enemy.GetComponent<Enemy>().photonView.RPC("TakeDamage", RpcTarget.MasterClient, damage * player.armor.helmetDamgeBoost);
                 }
             }
         }

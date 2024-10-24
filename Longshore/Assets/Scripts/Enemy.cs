@@ -11,8 +11,8 @@ public class Enemy : MonoBehaviourPun
     public float moveSpeed;
 
     public bool isBoss;
-    public int curHp;
-    public int maxHp;
+    public float curHp;
+    public float maxHp;
 
     public float chaseRange;
     public float attackRange;
@@ -33,11 +33,13 @@ public class Enemy : MonoBehaviourPun
     public HeaderInfo healthBar;
     private SpriteRenderer sr;
     private Rigidbody2D rig;
+    private ArmorData armor;
 
     private void Awake()
     {
         sr = gameObject.GetComponent<SpriteRenderer>();
         rig = gameObject.GetComponent<Rigidbody2D>();
+        armor = gameObject.GetComponent<ArmorData>();
     }
 
     private void Start()
@@ -76,6 +78,9 @@ public class Enemy : MonoBehaviourPun
                 rig.velocity = Vector2.zero;
             }
         }
+        //since the regen rate is the same across clients this shouldn't be an issue
+        curHp = Mathf.Clamp(curHp + (armor.healthRegen * Time.deltaTime), curHp, maxHp);
+        healthBar.UpdateHealthBar(curHp);
 
         DetectPlayer();
     }
@@ -84,7 +89,7 @@ public class Enemy : MonoBehaviourPun
     {
         Debug.Log("EnemyAttack");
         lastAttackTime = Time.time;
-        targetPlayer.photonView.RPC("TakeDamage", targetPlayer.photonPlayer, damage);
+        targetPlayer.photonView.RPC("TakeDamage", targetPlayer.photonPlayer, damage * armor.helmetDamgeBoost);
     }
 
     private void DetectPlayer()
@@ -114,9 +119,10 @@ public class Enemy : MonoBehaviourPun
     }
 
     [PunRPC]
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damageTaken)
     {
-        curHp -= damage;
+        damageTaken = Mathf.Clamp(damageTaken - armor.defense, 0, damageTaken);
+        curHp -= damageTaken;
 
         healthBar.photonView.RPC("UpdateHealthBar", RpcTarget.All, curHp);
 
@@ -141,7 +147,7 @@ public class Enemy : MonoBehaviourPun
     }
 
     [PunRPC]
-    void FlashDamage()
+    private void FlashDamage()
     {
         StartCoroutine(DamageFlash());
 

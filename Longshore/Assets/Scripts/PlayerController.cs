@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviourPun
     [Header("Info")]
     public float moveSpeed;
     public int gold;
-    public int curHp;
-    public int maxHp;
+    public float curHp;
+    public float maxHp;
     public bool dead;
 
     [Header("Attack")]
@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviourPun
     private Animator weaponAnim;
     public HeaderInfo headerInfo;
     public GameObject inventory;
+    public ArmorData armor;
 
     //local player
     public static PlayerController me;
@@ -63,6 +64,7 @@ public class PlayerController : MonoBehaviourPun
         sr = gameObject.GetComponent<SpriteRenderer>();
         weaponAnim = gameObject.GetComponentInChildren<Animator>();
         weapon = gameObject.GetComponent<WeaponController>();
+        armor = gameObject.GetComponent<ArmorData>();
     }
 
     private void Start()
@@ -105,6 +107,8 @@ public class PlayerController : MonoBehaviourPun
             //controller.mouseOver.SetActive(false);
             inventory.SetActive(!inventory.activeSelf);
         }
+
+        Heal(armor.healthRegen * Time.deltaTime);
     }
 
     /*
@@ -136,12 +140,13 @@ public class PlayerController : MonoBehaviourPun
         float y = Input.GetAxis("Vertical");
 
         //setting velocity
-        rig.velocity = new Vector2(x, y) * moveSpeed;
+        rig.velocity = new Vector2(x, y) * moveSpeed * armor.bootsSpeed;
     }
 
     [PunRPC]
-    public void TakeDamage(int damageTaken)
+    public void TakeDamage(float damageTaken)
     {
+        damageTaken = Mathf.Clamp(damageTaken - armor.defense, 0, damageTaken);
         curHp -= damageTaken;
 
         if(curHp <= 0)
@@ -172,6 +177,7 @@ public class PlayerController : MonoBehaviourPun
         sr.color = Color.clear;
         transform.position = new Vector3(0, 99, 0);
 
+        gold /= 2;
 
         Vector3 spawnPos = GameManager.instance.spawnPoints[Random.Range(0, GameManager.instance.spawnPoints.Length)].position;
 
@@ -192,7 +198,7 @@ public class PlayerController : MonoBehaviourPun
     }
 
     [PunRPC]
-    private void Heal(int healAmount)
+    private void Heal(float healAmount)
     {
         curHp = Mathf.Clamp(curHp + healAmount, 0, maxHp);
 

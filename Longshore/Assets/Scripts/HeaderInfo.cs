@@ -12,7 +12,7 @@ public class HeaderInfo : MonoBehaviourPun
     private float maxValue;
 
 
-    public void Initialize(string text, int maxVal)
+    public void Initialize(string text, float maxVal)
     {
         nameText.text = text;
         maxValue = maxVal;
@@ -20,7 +20,7 @@ public class HeaderInfo : MonoBehaviourPun
     }
 
     [PunRPC]
-    private void UpdateHealthBar(int value)
+    public void UpdateHealthBar(float value)
     {
         //percentage of health as the fill amount
         bar.fillAmount = (float)value / maxValue;

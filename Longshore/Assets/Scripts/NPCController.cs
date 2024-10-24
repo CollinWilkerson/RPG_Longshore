@@ -149,7 +149,7 @@ public class NPCController : MonoBehaviour
     public void HealPlayer()
     {
         
-        client.gold = Mathf.Clamp(client.gold - (client.maxHp - client.curHp) / 10, 0, client.gold);
+        client.gold = Mathf.Clamp(client.gold - (int)(client.maxHp - client.curHp) / 10, 0, client.gold);
         GameUI.instance.UpdateGoldText(client.gold);
         client.photonView.RPC("Heal", RpcTarget.All, client.maxHp);
     }

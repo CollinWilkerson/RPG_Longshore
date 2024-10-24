@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3388844842624742167}
   - component: {fileID: 2941002650804940042}
   - component: {fileID: 8847210435380104032}
+  - component: {fileID: 1037131803166983711}
   - component: {fileID: 6574184654356791988}
   - component: {fileID: 6069823546720704626}
   m_Layer: 7
@@ -173,13 +174,33 @@ MonoBehaviour:
   isBoss: 0
   curHp: 10
   maxHp: 10
-  chaseRange: 5
+  chaseRange: 2
   attackRange: 1
   playerDetectRate: 0.2
   objectToSpawnOnDeath: SilverPickup
   damage: 10
   attackRate: 0.05
   healthBar: {fileID: 6616562060604637191}
+--- !u!114 &1037131803166983711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130337397587027432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsDefense: 0
+  bootsSpeed: 1
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  chestDefense: 0
 --- !u!114 &6574184654356791988
 MonoBehaviour:
   m_ObjectHideFlags: 0
