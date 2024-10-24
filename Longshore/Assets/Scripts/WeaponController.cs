@@ -45,7 +45,7 @@ public class WeaponController : MonoBehaviourPun
     [PunRPC]
     public void SetWeapon(WeaponData data)
     {
-        if (data.weaponType == "Axe")
+        if (data.weaponType == "Axe" || data.weaponType == "Sword")
         {
             weaponStyle = Style.Axe;
             attackSweep = data.attackSweep;

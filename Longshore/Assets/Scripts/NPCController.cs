@@ -34,6 +34,7 @@ public class NPCController : MonoBehaviour
     private PlayerController client;
     public NPCType type;
     public GameObject toolTip;
+    private WeaponData weaponToSell;
 
 
     private void Awake()
@@ -100,7 +101,7 @@ public class NPCController : MonoBehaviour
             npcScreen.SetActive(false);
         }
 
-        //dialouge progression - uses a bianary tree to store text
+        //dialouge progression - uses bianary tree structure to store text
         if (!interactionEnded)
         {
             if (type == NPCType.Apothecary)
@@ -144,12 +145,53 @@ public class NPCController : MonoBehaviour
         }
     }
 
+    //for apothecary
     public void HealPlayer()
     {
         
         client.gold = Mathf.Clamp(client.gold - (client.maxHp - client.curHp) / 10, 0, client.gold);
         GameUI.instance.UpdateGoldText(client.gold);
         client.photonView.RPC("Heal", RpcTarget.All, client.maxHp);
+    }
+
+    //for merchant
+    public void DisplayItem(WeaponData data)
+    {
+        weaponToSell = data;
+        textBox.text = "Merchant: Ahh, you've got your eyes on " + data.weaponName +
+            " the " + data.weaponType + ". ";
+        if (data.weaponType == "Axe")
+        {
+            textBox.text = textBox.text + "It packs a real punch, but it's a bit slow.";
+        }
+        if (data.weaponType == "Sword")
+        {
+            textBox.text = textBox.text + "It's quick, but doesn't hit as hard.";
+        }
+
+        textBox.text = textBox.text+
+            "\nDamage: " + data.damage +
+            "\nRate: " + data.attackRate +
+            "\nRange: " + data.attackRange;
+
+        topButtonText.text = "Buy (" + data.goldValue + " gold)";
+        bottomButton.interactable = false;
+    }
+
+    //for merchant
+    public void SellItem()
+    {
+        if (client.gold >= weaponToSell.goldValue)
+        {
+            client.inventory.GetComponent<InventoryController>().AddItem(weaponToSell);
+            client.gold -= weaponToSell.goldValue;
+            GameUI.instance.UpdateGoldText(client.gold);
+            textBox.text = "Merchant: Thanks, mate.";
+        }
+        else
+        {
+            textBox.text = "Merchant: Come back when your a little richer, mate.";
+        }
     }
 
     public void TopOption()

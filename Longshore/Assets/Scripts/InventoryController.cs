@@ -6,9 +6,12 @@ using Photon.Pun;
 public class InventoryController : MonoBehaviourPun
 {
     private InventorySlotController[] slots;
-    public PlayerController clientPlayer;
     public WeaponDisplay DataDisplay;
+    public PlayerController clientPlayer;
+
+    [Header("For Merchant")]
     public bool vendorInventory;
+    public NPCController vendorController;
 
     private void Start()
     {

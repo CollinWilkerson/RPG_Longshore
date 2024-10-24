@@ -36,11 +36,9 @@ public class InventorySlotController : MonoBehaviour//, IPointerEnterHandler, IP
             inventory.clientPlayer.weapon.SetWeapon(inventoryWeapon);
             inventory.DataDisplay.UpdateIcon(inventoryWeapon);
         }
-        else if(inventoryWeapon.goldValue <= inventory.clientPlayer.gold)
+        else
         {
-            inventory.clientPlayer.inventory.GetComponent<InventoryController>().AddItem(inventoryWeapon);
-            inventory.clientPlayer.gold -= inventoryWeapon.goldValue;
-            GameUI.instance.UpdateGoldText(inventory.clientPlayer.gold);
+            inventory.vendorController.DisplayItem(inventoryWeapon);
         }
     }
 
