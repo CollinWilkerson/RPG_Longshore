@@ -34,4 +34,24 @@ public class WeaponDisplay : MonoBehaviour
             "\nRate: " + data.attackRate + 
             "\nRange: " + data.attackRange;
     }
+    public void UpdateIcon(ArmorData data)
+    {
+
+        TextMeshProUGUI displayText = gameObject.GetComponentInChildren<TextMeshProUGUI>();
+        if (data.type == ArmorType.boots) {
+            displayText.text = "Defense: " + data.bootsDefense +
+                "\nSpeed: " + data.bootsSpeed;
+        }
+        if (data.type == ArmorType.chestplate)
+        {
+            displayText.text = "Defense: " + data.chestDefense +
+                "\nRegen: " + data.healthRegen +
+                "\nReflect: " + data.damageReflect;
+        }
+        if (data.type == ArmorType.helmet)
+        {
+            displayText.text = "Defense: " + data.helmetDefense +
+                "\nDamage Multiplier: " + data.helmetDamgeBoost;
+        }
+    }
 }

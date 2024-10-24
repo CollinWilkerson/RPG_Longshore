@@ -734,6 +734,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1751392393}
     m_Modifications:
+    - target: {fileID: 343860707388298780, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1561272580, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+    - target: {fileID: 343860707388298780, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1195648235639744507, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1045,7 +1053,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4973791009294858602, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1518306364}
   m_SourcePrefab: {fileID: 100100000, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
 --- !u!224 &176085179 stripped
 RectTransform:
@@ -1506,6 +1517,34 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4484936170262428717, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
   m_PrefabInstance: {fileID: 252185187}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &274241535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4973791009294858602, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+  m_PrefabInstance: {fileID: 1475200483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &274241537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274241535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  armorSprite: {fileID: -1560963372, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 0
+  bootsDefense: 0
+  bootsSpeed: 1
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  chestDefense: 3
+  healthRegen: 0
+  damageReflect: 0
 --- !u!1 &313534955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,6 +2025,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1751392393}
     m_Modifications:
+    - target: {fileID: 343860707388298780, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1990434676, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+    - target: {fileID: 343860707388298780, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823187810102536277, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2368,6 +2415,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5381620257167427363, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 419010167}
+    - targetCorrespondingSourceObject: {fileID: 4973791009294858602, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1327687091}
   m_SourcePrefab: {fileID: 100100000, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
 --- !u!224 &419010160 stripped
 RectTransform:
@@ -7440,6 +7490,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldText: {fileID: 1399860655}
+--- !u!1 &1327687089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4973791009294858602, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+  m_PrefabInstance: {fileID: 419010159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1327687091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327687089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  armorSprite: {fileID: -1990434676, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 0
+  bootsDefense: 0
+  bootsSpeed: 1
+  helmetDefense: 2
+  helmetDamgeBoost: 1
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
 --- !u!1 &1360995002
 GameObject:
   m_ObjectHideFlags: 0
@@ -8164,6 +8242,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1751392393}
     m_Modifications:
+    - target: {fileID: 343860707388298780, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1560963372, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+    - target: {fileID: 343860707388298780, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 823187810102536277, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -8531,6 +8617,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5381620257167427363, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1475200490}
+    - targetCorrespondingSourceObject: {fileID: 4973791009294858602, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 274241537}
   m_SourcePrefab: {fileID: 100100000, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
 --- !u!224 &1475200484 stripped
 RectTransform:
@@ -8739,6 +8828,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499698552}
   m_CullTransparentMesh: 1
+--- !u!1 &1518306362 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4973791009294858602, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+  m_PrefabInstance: {fileID: 176085178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1518306364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518306362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  armorSprite: {fileID: -1561272580, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 0
+  bootsDefense: 2
+  bootsSpeed: 1.2
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
 --- !u!1 &1574173887
 GameObject:
   m_ObjectHideFlags: 0

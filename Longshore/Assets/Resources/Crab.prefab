@@ -193,14 +193,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  armorSprite: {fileID: 0}
   defense: 1
-  healthRegen: 0
-  damageReflect: 0
+  goldValue: 0
   bootsDefense: 0
   bootsSpeed: 1
   helmetDefense: 0
   helmetDamgeBoost: 1
   chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
 --- !u!114 &6574184654356791988
 MonoBehaviour:
   m_ObjectHideFlags: 0

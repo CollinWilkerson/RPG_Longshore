@@ -34,6 +34,20 @@ public class InventoryController : MonoBehaviourPun
         Debug.Log("Inventory Full");
     }
 
+    [PunRPC]
+    public void AddItem(ArmorData data)
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (!slots[i].isFilled)
+            {
+                slots[i].SetInventorySlot(data);
+                return;
+            }
+        }
+        Debug.Log("Inventory Full");
+    }
+
     public void SetClient(PlayerController client)
     {
         clientPlayer = client;

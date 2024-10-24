@@ -146,6 +146,7 @@ public class PlayerController : MonoBehaviourPun
     [PunRPC]
     public void TakeDamage(float damageTaken)
     {
+        Debug.Log(armor.defense);
         damageTaken = Mathf.Clamp(damageTaken - armor.defense, 0, damageTaken);
         curHp -= damageTaken;
 

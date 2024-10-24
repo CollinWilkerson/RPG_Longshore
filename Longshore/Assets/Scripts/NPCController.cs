@@ -35,6 +35,8 @@ public class NPCController : MonoBehaviour
     public NPCType type;
     public GameObject toolTip;
     private WeaponData weaponToSell;
+    private ArmorData armorToSell;
+    private bool sellingWeapon;
 
 
     private void Awake()
@@ -176,21 +178,69 @@ public class NPCController : MonoBehaviour
 
         topButtonText.text = "Buy (" + data.goldValue + " gold)";
         bottomButton.interactable = false;
+        sellingWeapon = true;
+    }
+
+    //for merchant
+    public void DisplayItem(ArmorData data)
+    {
+        armorToSell = data;
+        textBox.text = "Merchant: Ahh, you've got your eyes on a ";
+        if (data.type == ArmorType.boots)
+        {
+            textBox.text = textBox.text + "pair of boots" +
+                "\nDefense: " + data.bootsDefense +
+                "\nSpeed: " + data.bootsSpeed;
+        }
+        if (data.type == ArmorType.chestplate)
+        {
+            textBox.text = textBox.text + "chestplate" + 
+                "\nDefense: " + data.chestDefense +
+                "\nRegen: " + data.healthRegen +
+                "\nReflect: " + data.damageReflect;
+        }
+        if (data.type == ArmorType.helmet)
+        {
+            textBox.text = textBox.text + "helmet." +
+                "\nDefense: " + data.helmetDefense +
+                "\nDamage Multiplier: " + data.helmetDamgeBoost;
+        }
+
+        topButtonText.text = "Buy (" + data.goldValue + " gold)";
+        bottomButton.interactable = false;
+        sellingWeapon = false;
     }
 
     //for merchant
     public void SellItem()
     {
-        if (client.gold >= weaponToSell.goldValue)
+        if (sellingWeapon)
         {
-            client.inventory.GetComponent<InventoryController>().AddItem(weaponToSell);
-            client.gold -= weaponToSell.goldValue;
-            GameUI.instance.UpdateGoldText(client.gold);
-            textBox.text = "Merchant: Thanks, mate.";
+            if (client.gold >= weaponToSell.goldValue)
+            {
+                client.inventory.GetComponent<InventoryController>().AddItem(weaponToSell);
+                client.gold -= weaponToSell.goldValue;
+                GameUI.instance.UpdateGoldText(client.gold);
+                textBox.text = "Merchant: Thanks, mate.";
+            }
+            else
+            {
+                textBox.text = "Merchant: Come back when your a little richer, mate.";
+            }
         }
         else
         {
-            textBox.text = "Merchant: Come back when your a little richer, mate.";
+            if (client.gold >= armorToSell.goldValue)
+            {
+                client.inventory.GetComponent<InventoryController>().AddItem(armorToSell);
+                client.gold -= armorToSell.goldValue;
+                GameUI.instance.UpdateGoldText(client.gold);
+                textBox.text = "Merchant: Thanks, mate.";
+            }
+            else
+            {
+                textBox.text = "Merchant: Come back when your a little richer, mate.";
+            }
         }
     }
 
