@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviourPun
             if(player.NickName == "ProfS")
             {
                 gold += 10000;
+                GameUI.instance.UpdateGoldText(gold);
             }
         }
         else

@@ -9,7 +9,8 @@ using TMPro;
 public enum NPCType
 {
     Merchant,
-    Apothecary
+    Apothecary,
+    Guide
 }
 
 public class NPCController : MonoBehaviour
@@ -28,7 +29,7 @@ public class NPCController : MonoBehaviour
 
     public TextMeshProUGUI textBox;
     private int interactionLevel;
-    private bool interactionEnded;
+    private bool interactionEnded = true;
 
     public LayerMask playerMask;
     private PlayerController client;
@@ -136,11 +137,63 @@ public class NPCController : MonoBehaviour
                     //end of dialoge path
                     EndDialouge();
                 }
-                else if(interactionLevel == 3)//bottom - Who're you?
+                else if (interactionLevel == 3)//bottom - Who're you?
                 {
-                    textBox.text = "Apothecary: I have the pleasure of being the only doctor in all of" +
-                        "longshore. Not that I have many patients. most people who come here go" +
+                    textBox.text = "Apothecary: I have the pleasure of being the only doctor in all of " +
+                        "longshore. Not that I have many patients. most people who come here go " +
                         "crazy before long. We call them the Lost.";
+                    EndDialouge();
+                }
+            }
+            if (type == NPCType.Guide)
+            {
+                if (interactionLevel == 1)//initial
+                {
+                    textBox.text = "Guide: Welcome to Longshore!";
+                    topButtonText.text = "Where am I?";
+                    bottomButtonText.text = "What do I do?";
+                }
+                if(interactionLevel == 2)//Top - where am I
+                {
+                    textBox.text = "Guide: I wish I was sure myself, all we know is that this " +
+                        "island is a frequent stop for crashing ships. brings newcomers like " +
+                        "yourself.";
+                    topButtonText.text = "We?";
+                    bottomButtonText.text = "Your ship?";
+                }
+                if(interactionLevel == 3)//Bottom - what do i do
+                {
+                    textBox.text = "Guide: That's really up to you. You can press I to see what " +
+                        "you've got. The people in town might be able to help you out if you're " +
+                        "short on supplies.";
+                    topButtonText.text = "Town?";
+                    bottomButtonText.text = "Around Here?";
+                }
+                if(interactionLevel == 4)// TT - we?
+                {
+                    textBox.text = "Guide: Me and some other survivors, the ones that haven't " +
+                        "gone crazy at least. There's a merchant, he might look shady but his goods " +
+                        "are quality. He's always got old stock to get rid of if you need a weapon.";
+                    EndDialouge();
+                }
+                if(interactionLevel == 5)//TB - Your Ship
+                {
+                    textBox.text = "Guide: The crown jewel of the Royal Navy of King Zedron, though " +
+                        "I'm afraid he's lost it like all the others. He enlisted the help of a Devil " +
+                        "up north to make sure that no one can leave.";
+                    EndDialouge();
+                }
+                if(interactionLevel == 6)//BT - Town
+                {
+                    textBox.text = "Guide: A little settlement down this path, the folks there are " +
+                        "friendly, might even help you get settled here.";
+                    EndDialouge();
+                }
+                if(interactionLevel == 7)//BB - Around Here
+                {
+                    textBox.text = "Guide: To the North is an inferno of horrors and to the south is a" +
+                        "swarm of angry crabs. Oh, and if you follow the path past the town you reach the" +
+                        "castle where the insane king lives. Lovely place, isn't it?";
                     EndDialouge();
                 }
             }
