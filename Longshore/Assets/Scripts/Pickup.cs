@@ -14,7 +14,7 @@ public class Pickup : MonoBehaviourPun
 {
     public PickupType type;
     public int value;
-    public bool perPlayer;
+    //public bool perPlayer;
     public InventoryController inventory;
 
     private void Start()
@@ -46,10 +46,6 @@ public class Pickup : MonoBehaviourPun
                 inventory.photonView.RPC("AddItem", player.photonPlayer,data);
             }
 
-            if (perPlayer)
-            {
-                Destroy(gameObject);
-            }
             else
             {
                 PhotonNetwork.Destroy(gameObject);
