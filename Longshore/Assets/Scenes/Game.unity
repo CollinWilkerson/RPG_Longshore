@@ -2972,7 +2972,7 @@ MonoBehaviour:
   weaponType: Axe
   weaponSprite: {fileID: 1280104312, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
   damage: 2
-  attackRate: 1
+  attackRate: 0.7
   attackRange: 1.2
   attackSweep: 100
   goldValue: 20
@@ -3012,7 +3012,7 @@ MonoBehaviour:
   weaponType: Axe
   weaponSprite: {fileID: -1099742973, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
   damage: 20
-  attackRate: 1
+  attackRate: 0.3
   attackRange: 2
   attackSweep: 180
   goldValue: 2000
@@ -3032,7 +3032,7 @@ MonoBehaviour:
   weaponType: Axe
   weaponSprite: {fileID: -1028139008, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
   damage: 10
-  attackRate: 1
+  attackRate: 0.5
   attackRange: 1.7
   attackSweep: 140
   goldValue: 500
@@ -3052,7 +3052,7 @@ MonoBehaviour:
   weaponType: Axe
   weaponSprite: {fileID: -309388488, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
   damage: 5
-  attackRate: 1
+  attackRate: 0.7
   attackRange: 1.5
   attackSweep: 120
   goldValue: 100
@@ -3072,7 +3072,7 @@ MonoBehaviour:
   weaponType: Axe
   weaponSprite: {fileID: 372908659, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
   damage: 3
-  attackRate: 1
+  attackRate: 0.7
   attackRange: 1.3
   attackSweep: 110
   goldValue: 50
@@ -4262,7 +4262,7 @@ MonoBehaviour:
   weaponType: Axe
   weaponSprite: {fileID: 1085331618, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
   damage: 1
-  attackRate: 1
+  attackRate: 0.7
   attackRange: 1
   attackSweep: 90
   goldValue: 0
@@ -9796,7 +9796,7 @@ MonoBehaviour:
   weaponName: Shimmer
   weaponType: Sword
   weaponSprite: {fileID: -381588699, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  damage: 10
+  damage: 15
   attackRate: 0.1
   attackRange: 1.5
   attackSweep: 140
@@ -9817,7 +9817,7 @@ MonoBehaviour:
   weaponType: Sword
   weaponSprite: {fileID: 541388057, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
   damage: 5
-  attackRate: 0.3
+  attackRate: 0.1
   attackRange: 1.2
   attackSweep: 120
   goldValue: 500
@@ -9837,7 +9837,7 @@ MonoBehaviour:
   weaponType: Sword
   weaponSprite: {fileID: 442921765, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
   damage: 3
-  attackRate: 0.5
+  attackRate: 0.3
   attackRange: 1.2
   attackSweep: 100
   goldValue: 100
@@ -9857,7 +9857,7 @@ MonoBehaviour:
   weaponType: Sword
   weaponSprite: {fileID: -748091526, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
   damage: 2
-  attackRate: 0.7
+  attackRate: 0.5
   attackRange: 1.2
   attackSweep: 90
   goldValue: 50
@@ -9877,7 +9877,7 @@ MonoBehaviour:
   weaponType: Sword
   weaponSprite: {fileID: -748091526, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
   damage: 1
-  attackRate: 0.7
+  attackRate: 0.5
   attackRange: 1
   attackSweep: 90
   goldValue: 10

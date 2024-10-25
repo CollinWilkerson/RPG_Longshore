@@ -177,7 +177,7 @@ MonoBehaviour:
   chaseRange: 5
   attackRange: 1.5
   playerDetectRate: 0.2
-  objectToSpawnOnDeath: GoldPickup
+  objectToSpawnOnDeath: MidTreasure
   damage: 30
   attackRate: 0.05
   healthBar: {fileID: 6616562060604637191}
