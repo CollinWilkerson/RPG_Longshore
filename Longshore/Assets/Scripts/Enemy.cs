@@ -89,7 +89,7 @@ public class Enemy : MonoBehaviourPun
     {
         Debug.Log("EnemyAttack");
         lastAttackTime = Time.time;
-        targetPlayer.photonView.RPC("TakeDamage", targetPlayer.photonPlayer, damage * armor.helmetDamgeBoost);
+        targetPlayer.photonView.RPC("TakeDamage", targetPlayer.photonPlayer, damage * armor.helmetDamgeBoost, this);
     }
 
     private void DetectPlayer()
@@ -115,6 +115,28 @@ public class Enemy : MonoBehaviourPun
                     }
                 }
             }
+        }
+    }
+
+    [PunRPC]
+    public void TakeDamage(float damageTaken, PlayerController attacker)
+    {
+        if ((int)(damageTaken * armor.damageReflect) > 1)
+        {
+            attacker.photonView.RPC("TakeDamage", RpcTarget.MasterClient, damageTaken * armor.damageReflect);
+        }
+        damageTaken = Mathf.Clamp(damageTaken - armor.defense, 0, damageTaken);
+        curHp -= damageTaken;
+
+        healthBar.photonView.RPC("UpdateHealthBar", RpcTarget.All, curHp);
+
+        if (curHp <= 0)
+        {
+            Die();
+        }
+        else
+        {
+            photonView.RPC("FlashDamage", RpcTarget.All);
         }
     }
 

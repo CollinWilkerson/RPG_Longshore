@@ -112,7 +112,7 @@ public class NPCController : MonoBehaviour
                 {
                     textBox.text = "Apothecary: All banged up?";
 
-                    topButtonText.text = "Heal (" + (client.maxHp - client.curHp) / 10 + " gold)";
+                    topButtonText.text = "Heal (" + (int)(client.maxHp - client.curHp) / 10 + " gold)";
                     bottomButtonText.text = "Who're you?";
                 }
                 else if (interactionLevel == 2)//top - heal

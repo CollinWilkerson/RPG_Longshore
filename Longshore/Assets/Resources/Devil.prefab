@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 3388844842624742167}
   - component: {fileID: 2941002650804940042}
   - component: {fileID: 8847210435380104032}
-  - component: {fileID: 8598374024770353443}
+  - component: {fileID: 4341432441688669765}
   - component: {fileID: 6574184654356791988}
   - component: {fileID: 6069823546720704626}
   m_Layer: 7
-  m_Name: Watcher
+  m_Name: Devil
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 1393373881
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 402ad562055fc7948bfb72112d09e1cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1b0adbdbf0e13c4fa976bf2d8c6f378, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -154,8 +154,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.0857188, y: 1.0857188}
+  m_Offset: {x: 0.1, y: 0}
+  m_Size: {x: 1.38, y: 2.11}
   m_Direction: 0
 --- !u!114 &8847210435380104032
 MonoBehaviour:
@@ -169,19 +169,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38f5da5b2d9ee3f45a9f87537569fb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: Watcher
-  moveSpeed: 2
-  isBoss: 0
-  curHp: 50
-  maxHp: 50
+  enemyName: Devil
+  moveSpeed: 5
+  isBoss: 1
+  curHp: 500
+  maxHp: 500
   chaseRange: 5
-  attackRange: 5
-  playerDetectRate: 0.4
-  objectToSpawnOnDeath: GoldPickup
-  damage: 10
-  attackRate: 3
+  attackRange: 3
+  playerDetectRate: 0.2
+  objectToSpawnOnDeath: ChestPickup
+  damage: 50
+  attackRate: 0.05
   healthBar: {fileID: 6616562060604637191}
---- !u!114 &8598374024770353443
+--- !u!114 &4341432441688669765
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,8 +202,8 @@ MonoBehaviour:
   helmetDamgeBoost: 1
   ChestSR: {fileID: 0}
   chestDefense: 0
-  healthRegen: 0
-  damageReflect: 1
+  healthRegen: 1
+  damageReflect: 0.1
   bootsSR: {fileID: 0}
   bootsDefense: 0
   bootsSpeed: 1
@@ -340,7 +340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3004481379802836202, guid: 7114f547f418a294981daa5f9ecd6ca2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.73
+      value: 1.257
       objectReference: {fileID: 0}
     - target: {fileID: 3004481379802836202, guid: 7114f547f418a294981daa5f9ecd6ca2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

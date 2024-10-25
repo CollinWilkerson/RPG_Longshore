@@ -144,13 +144,46 @@ public class PlayerController : MonoBehaviourPun
     }
 
     [PunRPC]
+    public void TakeDamage(float damageTaken, Enemy attacker)
+    {
+        if((int)(damageTaken * armor.damageReflect) > 1)
+        {
+            attacker.photonView.RPC("TakeDamage", RpcTarget.MasterClient, damageTaken * armor.damageReflect);
+        }
+        //Debug.Log(armor.defense);
+        damageTaken = Mathf.Clamp(damageTaken - armor.defense, 0, damageTaken);
+        curHp -= damageTaken;
+
+        if(curHp <= 0)
+        {
+            Die();
+        }
+        else
+        {
+
+            headerInfo.photonView.RPC("UpdateHealthBar", RpcTarget.All, curHp);
+
+            StartCoroutine(DamageFlash());
+
+            //save this tidbit for later
+            IEnumerator DamageFlash()
+            {
+                sr.color = Color.red;
+                yield return new WaitForSeconds(0.05f);
+                sr.color = Color.white;
+            }
+        }
+    }
+
+    //this is to avoid double reflections
+    [PunRPC]
     public void TakeDamage(float damageTaken)
     {
         Debug.Log(armor.defense);
         damageTaken = Mathf.Clamp(damageTaken - armor.defense, 0, damageTaken);
         curHp -= damageTaken;
 
-        if(curHp <= 0)
+        if (curHp <= 0)
         {
             Die();
         }
@@ -179,6 +212,7 @@ public class PlayerController : MonoBehaviourPun
         transform.position = new Vector3(0, 99, 0);
 
         gold /= 2;
+        GameUI.instance.UpdateGoldText(gold);
 
         Vector3 spawnPos = GameManager.instance.spawnPoints[Random.Range(0, GameManager.instance.spawnPoints.Length)].position;
 
