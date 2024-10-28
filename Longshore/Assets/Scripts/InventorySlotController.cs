@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
 //enum for what type of item it is then switch that in the onitemselect
 
@@ -12,29 +13,29 @@ using UnityEngine.UI;
 /// </summary>
 public class InventorySlotController : MonoBehaviour
 {
-    private WeaponData inventoryWeapon;
-    private ArmorData inventoryArmor;
+    [SerializeField]
+    private int inventoryWeapon;
+    [SerializeField]
+    private int inventoryArmor;
     private InventoryController inventory;
     private Image image;
     public bool isFilled = false;
 
-    private void Awake()
+    private void Start()
     {
         image = gameObject.GetComponent<Image>();
         inventory = FindFirstObjectByType<InventoryController>();
-        SetInventorySlot(gameObject.GetComponent<WeaponData>());
-        SetInventorySlot(gameObject.GetComponent<ArmorData>());
+        SetInventorySlot(inventoryWeapon);
+        SetInventorySlotArmor(inventoryArmor);
     }
 
     public void OnItemSelect()
     {
-        if (inventoryWeapon != null)
+        if (inventoryWeapon != -1)
         {
             if (!inventory.vendorInventory)
             {
-                //photon is not a fan of sprites over the network
-                //could fix with a sprite dictionary, no time
-                inventory.clientPlayer.weapon.SetWeapon(inventoryWeapon);
+                inventory.clientPlayer.weapon.photonView.RPC("SetWeapon", RpcTarget.All, inventoryWeapon);
                 inventory.DataDisplay.UpdateIcon(inventoryWeapon);
             }
             else
@@ -42,53 +43,54 @@ public class InventorySlotController : MonoBehaviour
                 inventory.vendorController.DisplayItem(inventoryWeapon);
             }
         }
-        else if (inventoryArmor != null)
+        else if (inventoryArmor != -1)
         {
             if (!inventory.vendorInventory)
             {
-                if (inventoryArmor.type == ArmorType.boots)
+                if (ArmorCatalogue.catalogue[inventoryArmor].type == ArmorType.boots)
                 {
-                    inventory.clientPlayer.armor.GetBoots(inventoryArmor);
+                    inventory.clientPlayer.armor.photonView.RPC("GetBoots",RpcTarget.All,inventoryArmor);
                 }
-                if (inventoryArmor.type == ArmorType.chestplate)
+                if (ArmorCatalogue.catalogue[inventoryArmor].type == ArmorType.chestplate)
                 {
-                    inventory.clientPlayer.armor.GetChestArmor(inventoryArmor);
+                    inventory.clientPlayer.armor.photonView.RPC("GetChestArmor", RpcTarget.All, inventoryArmor);
                 }
-                if (inventoryArmor.type == ArmorType.helmet)
+                if (ArmorCatalogue.catalogue[inventoryArmor].type == ArmorType.helmet)
                 {
-                    inventory.clientPlayer.armor.GetHelmet(inventoryArmor);
+                    inventory.clientPlayer.armor.photonView.RPC("GetHelmet", RpcTarget.All, inventoryArmor);
                 }
-                inventory.DataDisplay.UpdateIcon(inventoryArmor);
+                inventory.DataDisplay.UpdateIconArmor(inventoryArmor);
             }
             else
             {
-                inventory.vendorController.DisplayItem(inventoryArmor);
+                inventory.vendorController.DisplayArmor(inventoryArmor);
             }
         }
     }
 
     //stores the data and changes the sprite
-    public void SetInventorySlot(WeaponData newWeapon)
+    public void SetInventorySlot(int index)
     {
-        if(newWeapon == null)
+        if (index == -1 || index > WeaponCatalogue.catalogue.Length)
         {
             return;
         }
-        inventoryWeapon = newWeapon;
+        Debug.Log("Collected: " + index + "\nName: " + WeaponCatalogue.catalogue[index].weaponName);
+        inventoryWeapon = index;
         image.color = Color.white;
-        image.sprite = inventoryWeapon.weaponSprite;
+        image.sprite = WeaponCatalogue.catalogue[index].weaponSprite;
         isFilled = true;
     }
 
-    public void SetInventorySlot(ArmorData newArmor)
+    public void SetInventorySlotArmor(int index)
     {
-        if (newArmor == null)
+        if (index == -1 || index > ArmorCatalogue.catalogue.Length)
         {
             return;
         }
-        inventoryArmor = newArmor;
+        inventoryArmor = index;
         image.color = Color.white;
-        image.sprite = inventoryArmor.armorSprite;
+        image.sprite = ArmorCatalogue.catalogue[index].armorSprite;
         isFilled = true;
     }
 

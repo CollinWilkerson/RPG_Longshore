@@ -60,6 +60,22 @@ public class WeaponController : MonoBehaviourPun
     }
 
     [PunRPC]
+    public void SetWeapon(int index)
+    {
+        WeaponData data = WeaponCatalogue.catalogue[index];
+        if (data.weaponType == "Axe" || data.weaponType == "Sword")
+        {
+            weaponStyle = Style.Axe;
+            attackSweep = data.attackSweep;
+        }
+
+        damage = data.damage;
+        attackRange = data.attackRange;
+        attackRate = data.attackRate;
+        weaponSR.sprite = data.weaponSprite;
+    }
+
+    [PunRPC]
     public void NetworkChangeSprite(Sprite s)
     {
         weaponSR.sprite = s;

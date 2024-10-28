@@ -34,9 +34,29 @@ public class WeaponDisplay : MonoBehaviour
             "\nRate: " + data.attackRate + 
             "\nRange: " + data.attackRange;
     }
-    public void UpdateIcon(ArmorData data)
-    {
 
+    public void UpdateIcon(int index)
+    {
+        if (index == -1 || index > WeaponCatalogue.catalogue.Length)
+        {
+            return;
+        }
+        WeaponData data = WeaponCatalogue.catalogue[index];
+        TextMeshProUGUI displayText = gameObject.GetComponentInChildren<TextMeshProUGUI>();
+        displayText.text = "Name: " + data.weaponName +
+            "\nType: " + data.weaponType +
+            "\nDamage: " + data.damage +
+            "\nRate: " + data.attackRate +
+            "\nRange: " + data.attackRange;
+    }
+
+    public void UpdateIconArmor(int index)
+    {
+        if (index == -1 || index > ArmorCatalogue.catalogue.Length)
+        {
+            return;
+        }
+        ArmorData data = ArmorCatalogue.catalogue[index];
         TextMeshProUGUI displayText = gameObject.GetComponentInChildren<TextMeshProUGUI>();
         if (data.type == ArmorType.boots) {
             displayText.text = "Defense: " + data.bootsDefense +

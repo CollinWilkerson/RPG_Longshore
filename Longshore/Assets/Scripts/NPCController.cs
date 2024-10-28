@@ -35,8 +35,8 @@ public class NPCController : MonoBehaviour
     private PlayerController client;
     public NPCType type;
     public GameObject toolTip;
-    private WeaponData weaponToSell;
-    private ArmorData armorToSell;
+    private int weaponToSell;
+    private int armorToSell;
     private bool sellingWeapon;
 
 
@@ -210,6 +210,8 @@ public class NPCController : MonoBehaviour
     }
 
     //for merchant
+    //old data to data version
+    /*
     public void DisplayItem(WeaponData data)
     {
         weaponToSell = data;
@@ -233,11 +235,37 @@ public class NPCController : MonoBehaviour
         bottomButton.interactable = false;
         sellingWeapon = true;
     }
+    */
+    public void DisplayItem(int index)
+    {
+        WeaponData data = WeaponCatalogue.catalogue[index];
+        weaponToSell = index;
+        textBox.text = "Merchant: Ahh, you've got your eyes on " + data.weaponName +
+            " the " + data.weaponType + ". ";
+        if (data.weaponType == "Axe")
+        {
+            textBox.text = textBox.text + "It packs a real punch, but it's a bit slow.";
+        }
+        if (data.weaponType == "Sword")
+        {
+            textBox.text = textBox.text + "It's quick, but doesn't hit as hard.";
+        }
+
+        textBox.text = textBox.text +
+            "\nDamage: " + data.damage +
+            "\nRate: " + data.attackRate +
+            "\nRange: " + data.attackRange;
+
+        topButtonText.text = "Buy (" + data.goldValue + " gold)";
+        bottomButton.interactable = false;
+        sellingWeapon = true;
+    }
 
     //for merchant
-    public void DisplayItem(ArmorData data)
+    public void DisplayArmor(int index)
     {
-        armorToSell = data;
+        ArmorData data = ArmorCatalogue.catalogue[index];
+        armorToSell = index;
         textBox.text = "Merchant: Ahh, you've got your eyes on a ";
         if (data.type == ArmorType.boots)
         {
@@ -269,10 +297,11 @@ public class NPCController : MonoBehaviour
     {
         if (sellingWeapon)
         {
-            if (client.gold >= weaponToSell.goldValue)
+            WeaponData weaponToSellData = WeaponCatalogue.catalogue[weaponToSell];
+            if (client.gold >= weaponToSellData.goldValue)
             {
-                client.inventory.GetComponent<InventoryController>().AddItem(weaponToSell);
-                client.gold -= weaponToSell.goldValue;
+                client.inventory.GetComponent<InventoryController>().AddItem(weaponToSell, false);
+                client.gold -= weaponToSellData.goldValue;
                 GameUI.instance.UpdateGoldText(client.gold);
                 textBox.text = "Merchant: Thanks, mate.";
             }
@@ -283,10 +312,11 @@ public class NPCController : MonoBehaviour
         }
         else
         {
-            if (client.gold >= armorToSell.goldValue)
+            ArmorData armorToSellData = ArmorCatalogue.catalogue[armorToSell];
+            if (client.gold >= armorToSellData.goldValue)
             {
-                client.inventory.GetComponent<InventoryController>().AddItem(armorToSell);
-                client.gold -= armorToSell.goldValue;
+                client.inventory.GetComponent<InventoryController>().AddItem(armorToSell, true);
+                client.gold -= armorToSellData.goldValue;
                 GameUI.instance.UpdateGoldText(client.gold);
                 textBox.text = "Merchant: Thanks, mate.";
             }

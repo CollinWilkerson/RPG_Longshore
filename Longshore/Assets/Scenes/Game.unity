@@ -894,9 +894,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 3671457450390103512, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3705512875815263269, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Name
       value: Row (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052402536793950116, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4484936170262428717, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Pivot.x
@@ -1026,6 +1034,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 5870043981902655403, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6394488655886944959, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1042,6 +1054,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 6497218471652747348, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 6905579017868607099, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1057,6 +1073,10 @@ PrefabInstance:
     - target: {fileID: 7440110970318658671, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630096001006325183, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7790314357788334992, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Sprite
@@ -1133,152 +1153,288 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4973791009294858602, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1518306364}
-    - targetCorrespondingSourceObject: {fileID: 2775134835054850841, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 176085181}
-    - targetCorrespondingSourceObject: {fileID: 2168021873519481101, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 176085187}
-    - targetCorrespondingSourceObject: {fileID: 5749074901416106774, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 176085186}
-    - targetCorrespondingSourceObject: {fileID: 3305385175718589670, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 176085185}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
 --- !u!224 &176085179 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4484936170262428717, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
   m_PrefabInstance: {fileID: 176085178}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &176085180 stripped
+--- !u!1 &179458361
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2775134835054850841, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 176085178}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &176085181
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179458368}
+  - component: {fileID: 179458367}
+  - component: {fileID: 179458366}
+  - component: {fileID: 179458365}
+  - component: {fileID: 179458364}
+  - component: {fileID: 179458369}
+  - component: {fileID: 179458363}
+  - component: {fileID: 179458362}
+  - component: {fileID: 179458374}
+  - component: {fileID: 179458373}
+  - component: {fileID: 179458372}
+  - component: {fileID: 179458371}
+  - component: {fileID: 179458370}
+  m_Layer: 0
+  m_Name: WeaponCatalogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &179458362
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176085180}
+  m_GameObject: {fileID: 179458361}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
-  armorSprite: {fileID: 746212610, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  defense: 0
-  goldValue: 50
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 2
-  bootsSpeed: 1.2
---- !u!1 &176085182 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3305385175718589670, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 176085178}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &176085183 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5749074901416106774, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 176085178}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &176085184 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2168021873519481101, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 176085178}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &176085185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176085182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  armorSprite: {fileID: 1663468522, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
-  defense: 0
+  weaponName: Smite
+  weaponType: Axe
+  weaponSprite: {fileID: -1099742973, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  damage: 20
+  attackRate: 0.3
+  attackRange: 2
+  attackSweep: 180
   goldValue: 2000
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 10
-  bootsSpeed: 3
---- !u!114 &176085186
+--- !u!114 &179458363
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176085183}
+  m_GameObject: {fileID: 179458361}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
-  armorSprite: {fileID: -1785899103, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
-  defense: 0
+  weaponName: Crusader
+  weaponType: Axe
+  weaponSprite: {fileID: -1028139008, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  damage: 10
+  attackRate: 0.5
+  attackRange: 1.7
+  attackSweep: 140
   goldValue: 500
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 6
-  bootsSpeed: 2
---- !u!114 &176085187
+--- !u!114 &179458364
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176085184}
+  m_GameObject: {fileID: 179458361}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
-  armorSprite: {fileID: 1758912337, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  defense: 0
+  weaponName: Steady
+  weaponType: Axe
+  weaponSprite: {fileID: 372908659, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  damage: 3
+  attackRate: 0.7
+  attackRange: 1.3
+  attackSweep: 110
+  goldValue: 50
+--- !u!114 &179458365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179458361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: Faithful
+  weaponType: Axe
+  weaponSprite: {fileID: 1280104312, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  damage: 2
+  attackRate: 0.7
+  attackRange: 1.2
+  attackSweep: 100
+  goldValue: 20
+--- !u!114 &179458366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179458361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: Rusty
+  weaponType: Axe
+  weaponSprite: {fileID: 1085331618, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  damage: 1
+  attackRate: 0.7
+  attackRange: 1
+  attackSweep: 90
+  goldValue: 0
+--- !u!114 &179458367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179458361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3cd8d5c9a6466347acbbe9812bae901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &179458368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179458361}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1186.0758, y: 786.50867, z: 9.75531}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &179458369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179458361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: Retribution
+  weaponType: Axe
+  weaponSprite: {fileID: -309388488, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  damage: 5
+  attackRate: 0.7
+  attackRange: 1.5
+  attackSweep: 120
   goldValue: 100
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 4
-  bootsSpeed: 1.5
+--- !u!114 &179458370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179458361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: Shimmer
+  weaponType: Sword
+  weaponSprite: {fileID: -381588699, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  damage: 15
+  attackRate: 0.1
+  attackRange: 1.5
+  attackSweep: 140
+  goldValue: 2000
+--- !u!114 &179458371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179458361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: Flare
+  weaponType: Sword
+  weaponSprite: {fileID: 541388057, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  damage: 5
+  attackRate: 0.1
+  attackRange: 1.2
+  attackSweep: 120
+  goldValue: 500
+--- !u!114 &179458372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179458361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: Ray
+  weaponType: Sword
+  weaponSprite: {fileID: 442921765, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  damage: 3
+  attackRate: 0.3
+  attackRange: 1.2
+  attackSweep: 100
+  goldValue: 100
+--- !u!114 &179458373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179458361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: Pokey
+  weaponType: Sword
+  weaponSprite: {fileID: -748091526, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  damage: 2
+  attackRate: 0.5
+  attackRange: 1.2
+  attackSweep: 90
+  goldValue: 50
+--- !u!114 &179458374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179458361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: Driftwood
+  weaponType: Sword
+  weaponSprite: {fileID: -748091526, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  damage: 1
+  attackRate: 0.5
+  attackRange: 1
+  attackSweep: 90
+  goldValue: 10
 --- !u!1 &196015469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,6 +1727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Row (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4052402536793950116, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 4484936170262428717, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1699,6 +1859,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 5870043981902655403, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6394488655886944959, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1715,6 +1879,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 6497218471652747348, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 6905579017868607099, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1730,6 +1898,10 @@ PrefabInstance:
     - target: {fileID: 7440110970318658671, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630096001006325183, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 7790314357788334992, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Sprite
@@ -1806,180 +1978,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2775134835054850841, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 252185196}
-    - targetCorrespondingSourceObject: {fileID: 2168021873519481101, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 252185195}
-    - targetCorrespondingSourceObject: {fileID: 5749074901416106774, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 252185194}
-    - targetCorrespondingSourceObject: {fileID: 3305385175718589670, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 252185193}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
 --- !u!224 &252185188 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4484936170262428717, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
   m_PrefabInstance: {fileID: 252185187}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &252185189 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3305385175718589670, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 252185187}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &252185190 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5749074901416106774, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 252185187}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &252185191 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2168021873519481101, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 252185187}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &252185192 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2775134835054850841, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 252185187}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &252185193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252185189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
-  armorSprite: {fileID: -1048006474, guid: 0393b22bcf220d24ea156b1a859984fa, type: 3}
-  defense: 0
-  goldValue: 4000
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 10
-  healthRegen: 20
-  damageReflect: 1
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
---- !u!114 &252185194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252185190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
-  armorSprite: {fileID: -2056535804, guid: 0393b22bcf220d24ea156b1a859984fa, type: 3}
-  defense: 0
-  goldValue: 1000
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 5
-  healthRegen: 5
-  damageReflect: 0.25
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
---- !u!114 &252185195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252185191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
-  armorSprite: {fileID: 2137314787, guid: 0393b22bcf220d24ea156b1a859984fa, type: 3}
-  defense: 0
-  goldValue: 200
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 3
-  healthRegen: 1
-  damageReflect: 0.1
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
---- !u!114 &252185196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252185192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
-  armorSprite: {fileID: 1288656038, guid: 0393b22bcf220d24ea156b1a859984fa, type: 3}
-  defense: 0
-  goldValue: 100
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 1
-  healthRegen: 0.5
-  damageReflect: 0.05
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
---- !u!1 &274241535 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4973791009294858602, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 1475200483}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &274241537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 274241535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
-  armorSprite: {fileID: 579409693, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
-  defense: 0
-  goldValue: 20
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 2
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
 --- !u!1 &313534955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2508,6 +2513,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1751392393}
     m_Modifications:
+    - target: {fileID: 10437915313857354, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryWeapon
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 160306442924484012, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryWeapon
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 343860707388298780, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2632,6 +2645,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 3671457450390103512, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3705512875815263269, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Name
       value: Row
@@ -2651,6 +2668,14 @@ PrefabInstance:
     - target: {fileID: 3896481596279410830, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052402536793950116, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421000565106498449, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryWeapon
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4484936170262428717, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Pivot.x
@@ -2788,6 +2813,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 5870043981902655403, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6137882759859645686, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryWeapon
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6394488655886944959, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2803,6 +2836,10 @@ PrefabInstance:
     - target: {fileID: 6394488655886944959, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497218471652747348, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6766624881851228534, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Sprite
@@ -2836,12 +2873,24 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7630096001006325183, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769238351649002162, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryWeapon
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7790314357788334992, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1257747533, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
     - target: {fileID: 7790314357788334992, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462420547558471381, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryWeapon
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8640022766184010814, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
@@ -2911,171 +2960,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2511869854174556228, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 570010740}
-    - targetCorrespondingSourceObject: {fileID: 181649412996196967, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 419010162}
-    - targetCorrespondingSourceObject: {fileID: 8488249931365349662, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 419010170}
-    - targetCorrespondingSourceObject: {fileID: 2027805747262967296, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 419010169}
-    - targetCorrespondingSourceObject: {fileID: 8633614554355597304, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 419010168}
-    - targetCorrespondingSourceObject: {fileID: 5381620257167427363, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 419010167}
-    - targetCorrespondingSourceObject: {fileID: 4973791009294858602, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1327687091}
-    - targetCorrespondingSourceObject: {fileID: 2775134835054850841, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 587851240}
-    - targetCorrespondingSourceObject: {fileID: 2168021873519481101, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1650937706}
-    - targetCorrespondingSourceObject: {fileID: 5749074901416106774, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1650937705}
-    - targetCorrespondingSourceObject: {fileID: 3305385175718589670, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1650937704}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
 --- !u!224 &419010160 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4484936170262428717, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
   m_PrefabInstance: {fileID: 419010159}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &419010161 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 181649412996196967, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 419010159}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &419010162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419010161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponName: Faithful
-  weaponType: Axe
-  weaponSprite: {fileID: 1280104312, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  damage: 2
-  attackRate: 0.7
-  attackRange: 1.2
-  attackSweep: 100
-  goldValue: 20
---- !u!1 &419010163 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5381620257167427363, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 419010159}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &419010164 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8633614554355597304, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 419010159}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &419010165 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2027805747262967296, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 419010159}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &419010166 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8488249931365349662, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 419010159}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &419010167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419010163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponName: Smite
-  weaponType: Axe
-  weaponSprite: {fileID: -1099742973, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  damage: 20
-  attackRate: 0.3
-  attackRange: 2
-  attackSweep: 180
-  goldValue: 2000
---- !u!114 &419010168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419010164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponName: Crusader
-  weaponType: Axe
-  weaponSprite: {fileID: -1028139008, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  damage: 10
-  attackRate: 0.5
-  attackRange: 1.7
-  attackSweep: 140
-  goldValue: 500
---- !u!114 &419010169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419010165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponName: Retribution
-  weaponType: Axe
-  weaponSprite: {fileID: -309388488, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  damage: 5
-  attackRate: 0.7
-  attackRange: 1.5
-  attackSweep: 120
-  goldValue: 100
---- !u!114 &419010170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 419010166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponName: Steady
-  weaponType: Axe
-  weaponSprite: {fileID: 372908659, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  damage: 3
-  attackRate: 0.7
-  attackRange: 1.3
-  attackSweep: 110
-  goldValue: 50
 --- !u!1001 &472947858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3289,6 +3180,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Row (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4052402536793950116, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 21
+      objectReference: {fileID: 0}
     - target: {fileID: 4484936170262428717, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3417,6 +3312,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 5870043981902655403, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 6394488655886944959, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -3433,6 +3332,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 6497218471652747348, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 6905579017868607099, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3448,6 +3351,10 @@ PrefabInstance:
     - target: {fileID: 7440110970318658671, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630096001006325183, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7790314357788334992, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Sprite
@@ -3524,149 +3431,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2775134835054850841, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 499266197}
-    - targetCorrespondingSourceObject: {fileID: 2168021873519481101, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 499266196}
-    - targetCorrespondingSourceObject: {fileID: 5749074901416106774, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 499266195}
-    - targetCorrespondingSourceObject: {fileID: 3305385175718589670, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 499266194}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
 --- !u!224 &499266189 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4484936170262428717, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
   m_PrefabInstance: {fileID: 499266188}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &499266190 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3305385175718589670, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 499266188}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &499266191 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5749074901416106774, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 499266188}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &499266192 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2168021873519481101, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 499266188}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &499266193 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2775134835054850841, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 499266188}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &499266194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499266190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  armorSprite: {fileID: -432185661, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  defense: 0
-  goldValue: 2000
-  HelmetSR: {fileID: 0}
-  helmetDefense: 5
-  helmetDamgeBoost: 4
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
---- !u!114 &499266195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499266191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  armorSprite: {fileID: 746813349, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  defense: 0
-  goldValue: 500
-  HelmetSR: {fileID: 0}
-  helmetDefense: 3
-  helmetDamgeBoost: 2
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
---- !u!114 &499266196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499266192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  armorSprite: {fileID: 1232618892, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  defense: 0
-  goldValue: 100
-  HelmetSR: {fileID: 0}
-  helmetDefense: 2
-  helmetDamgeBoost: 1.5
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
---- !u!114 &499266197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499266193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  armorSprite: {fileID: -816816007, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  defense: 0
-  goldValue: 50
-  HelmetSR: {fileID: 0}
-  helmetDefense: 1
-  helmetDamgeBoost: 1.2
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
 --- !u!1001 &517497556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3782,6 +3553,10 @@ PrefabInstance:
     - target: {fileID: 3705512875815263269, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Name
       value: Row (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052402536793950116, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 4484936170262428717, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Pivot.x
@@ -3911,6 +3686,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 5870043981902655403, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 6394488655886944959, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -3927,6 +3706,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 6497218471652747348, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: isFilled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497218471652747348, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 6905579017868607099, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3942,6 +3729,10 @@ PrefabInstance:
     - target: {fileID: 7440110970318658671, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630096001006325183, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7790314357788334992, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Sprite
@@ -4018,149 +3809,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2775134835054850841, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 517497567}
-    - targetCorrespondingSourceObject: {fileID: 2168021873519481101, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 517497566}
-    - targetCorrespondingSourceObject: {fileID: 5749074901416106774, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 517497565}
-    - targetCorrespondingSourceObject: {fileID: 3305385175718589670, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 517497564}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
 --- !u!224 &517497557 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4484936170262428717, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
   m_PrefabInstance: {fileID: 517497556}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &517497560 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3305385175718589670, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 517497556}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &517497561 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5749074901416106774, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 517497556}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &517497562 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2168021873519481101, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 517497556}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &517497563 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2775134835054850841, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 517497556}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &517497564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517497560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  armorSprite: {fileID: -1561272580, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  defense: 0
-  goldValue: 2000
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 5
-  bootsSpeed: 6
---- !u!114 &517497565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517497561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  armorSprite: {fileID: -1972487998, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  defense: 0
-  goldValue: 500
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 3
-  bootsSpeed: 4
---- !u!114 &517497566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517497562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  armorSprite: {fileID: -860089477, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  defense: 0
-  goldValue: 100
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 2
-  bootsSpeed: 3
---- !u!114 &517497567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517497563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  armorSprite: {fileID: -1602760363, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  defense: 0
-  goldValue: 50
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 1
-  bootsSpeed: 2
 --- !u!1 &531165326
 GameObject:
   m_ObjectHideFlags: 0
@@ -4213,31 +3868,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
---- !u!1 &570010738 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2511869854174556228, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 419010159}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &570010740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570010738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponName: Rusty
-  weaponType: Axe
-  weaponSprite: {fileID: 1085331618, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  damage: 1
-  attackRate: 0.7
-  attackRange: 1
-  attackSweep: 90
-  goldValue: 0
 --- !u!1 &574068605
 GameObject:
   m_ObjectHideFlags: 0
@@ -4286,37 +3916,6 @@ MonoBehaviour:
   maxEnemies: 3
   spawnRadius: 5
   spawnCheckTime: 5
---- !u!1 &587851239 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2775134835054850841, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 419010159}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &587851240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587851239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  armorSprite: {fileID: -1990434676, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  defense: 0
-  goldValue: 50
-  HelmetSR: {fileID: 0}
-  helmetDefense: 2
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
 --- !u!1 &645623589
 GameObject:
   m_ObjectHideFlags: 0
@@ -5377,99 +4976,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1138463018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &957345937 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3305385175718589670, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 1475200483}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &957345938 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5749074901416106774, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 1475200483}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &957345939 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2168021873519481101, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 1475200483}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &957345940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957345937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
-  armorSprite: {fileID: -810073064, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
-  defense: 0
-  goldValue: 4000
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 30
-  healthRegen: 5
-  damageReflect: 0.2
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
---- !u!114 &957345941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957345938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
-  armorSprite: {fileID: -1626682871, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
-  defense: 0
-  goldValue: 1000
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 15
-  healthRegen: 1
-  damageReflect: 0.1
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
---- !u!114 &957345942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957345939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
-  armorSprite: {fileID: 73350869, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  defense: 0
-  goldValue: 200
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 5
-  healthRegen: 0.25
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -9026,18 +8532,124 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldText: {fileID: 1399860655}
---- !u!1 &1327687089 stripped
+--- !u!1 &1338924994
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4973791009294858602, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 419010159}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1327687091
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338924995}
+  - component: {fileID: 1338924999}
+  - component: {fileID: 1338924998}
+  - component: {fileID: 1338924997}
+  - component: {fileID: 1338924996}
+  - component: {fileID: 1338925020}
+  - component: {fileID: 1338925019}
+  - component: {fileID: 1338925018}
+  - component: {fileID: 1338925017}
+  - component: {fileID: 1338925016}
+  - component: {fileID: 1338925015}
+  - component: {fileID: 1338925014}
+  - component: {fileID: 1338925013}
+  - component: {fileID: 1338925012}
+  - component: {fileID: 1338925011}
+  - component: {fileID: 1338925010}
+  - component: {fileID: 1338925009}
+  - component: {fileID: 1338925008}
+  - component: {fileID: 1338925007}
+  - component: {fileID: 1338925006}
+  - component: {fileID: 1338925005}
+  - component: {fileID: 1338925004}
+  - component: {fileID: 1338925003}
+  - component: {fileID: 1338925002}
+  - component: {fileID: 1338925001}
+  - component: {fileID: 1338925000}
+  - component: {fileID: 1338925023}
+  - component: {fileID: 1338925022}
+  - component: {fileID: 1338925021}
+  m_Layer: 0
+  m_Name: ArmorCatalogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1338924995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 905.3863, y: 638.5011, z: -10.543549}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1338924996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1327687089}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  armorSprite: {fileID: 991811098, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
+  defense: 0
+  goldValue: 10
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 1
+  bootsSpeed: 1
+--- !u!114 &1338924997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  armorSprite: {fileID: 579409693, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
+  defense: 0
+  goldValue: 20
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 2
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338924998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
@@ -9050,6 +8662,642 @@ MonoBehaviour:
   HelmetSR: {fileID: 0}
   helmetDefense: 1
   helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338924999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec009c553599edd46aa4e4edbda94853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1338925000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  armorSprite: {fileID: -1972487998, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 500
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 3
+  bootsSpeed: 4
+--- !u!114 &1338925001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  armorSprite: {fileID: -2056535804, guid: 0393b22bcf220d24ea156b1a859984fa, type: 3}
+  defense: 0
+  goldValue: 1000
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 5
+  healthRegen: 5
+  damageReflect: 0.25
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338925002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  armorSprite: {fileID: 746813349, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 500
+  HelmetSR: {fileID: 0}
+  helmetDefense: 3
+  helmetDamgeBoost: 2
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338925003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  armorSprite: {fileID: -860089477, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 100
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 2
+  bootsSpeed: 3
+--- !u!114 &1338925004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  armorSprite: {fileID: 2137314787, guid: 0393b22bcf220d24ea156b1a859984fa, type: 3}
+  defense: 0
+  goldValue: 200
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 3
+  healthRegen: 1
+  damageReflect: 0.1
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338925005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  armorSprite: {fileID: 1232618892, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 100
+  HelmetSR: {fileID: 0}
+  helmetDefense: 2
+  helmetDamgeBoost: 1.5
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338925006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  armorSprite: {fileID: -1602760363, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 50
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 1
+  bootsSpeed: 2
+--- !u!114 &1338925007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  armorSprite: {fileID: 1288656038, guid: 0393b22bcf220d24ea156b1a859984fa, type: 3}
+  defense: 0
+  goldValue: 100
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 1
+  healthRegen: 0.5
+  damageReflect: 0.05
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338925008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  armorSprite: {fileID: -816816007, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 50
+  HelmetSR: {fileID: 0}
+  helmetDefense: 1
+  helmetDamgeBoost: 1.2
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338925009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  armorSprite: {fileID: 1663468522, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
+  defense: 0
+  goldValue: 2000
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 10
+  bootsSpeed: 3
+--- !u!114 &1338925010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  armorSprite: {fileID: -810073064, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
+  defense: 0
+  goldValue: 4000
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 30
+  healthRegen: 5
+  damageReflect: 0.2
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338925011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  armorSprite: {fileID: -1257747533, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
+  defense: 0
+  goldValue: 2000
+  HelmetSR: {fileID: 0}
+  helmetDefense: 10
+  helmetDamgeBoost: 1.5
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338925012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  armorSprite: {fileID: -1785899103, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
+  defense: 0
+  goldValue: 500
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 6
+  bootsSpeed: 2
+--- !u!114 &1338925013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  armorSprite: {fileID: -1626682871, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
+  defense: 0
+  goldValue: 1000
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 15
+  healthRegen: 1
+  damageReflect: 0.1
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338925014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  armorSprite: {fileID: 941875125, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
+  defense: 0
+  goldValue: 500
+  HelmetSR: {fileID: 0}
+  helmetDefense: 6
+  helmetDamgeBoost: 1.2
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338925015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  armorSprite: {fileID: 1758912337, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 100
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 4
+  bootsSpeed: 1.5
+--- !u!114 &1338925016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  armorSprite: {fileID: 73350869, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 200
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 5
+  healthRegen: 0.25
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338925017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  armorSprite: {fileID: -675666424, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 100
+  HelmetSR: {fileID: 0}
+  helmetDefense: 4
+  helmetDamgeBoost: 1.1
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338925018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  armorSprite: {fileID: 746212610, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 50
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 2
+  bootsSpeed: 1.2
+--- !u!114 &1338925019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  armorSprite: {fileID: -1560963372, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 100
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 3
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338925020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  armorSprite: {fileID: -1990434676, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 50
+  HelmetSR: {fileID: 0}
+  helmetDefense: 2
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338925021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  armorSprite: {fileID: -1561272580, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 2000
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 0
+  healthRegen: 0
+  damageReflect: 0
+  bootsSR: {fileID: 0}
+  bootsDefense: 5
+  bootsSpeed: 6
+--- !u!114 &1338925022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  armorSprite: {fileID: -1048006474, guid: 0393b22bcf220d24ea156b1a859984fa, type: 3}
+  defense: 0
+  goldValue: 4000
+  HelmetSR: {fileID: 0}
+  helmetDefense: 0
+  helmetDamgeBoost: 1
+  ChestSR: {fileID: 0}
+  chestDefense: 10
+  healthRegen: 20
+  damageReflect: 1
+  bootsSR: {fileID: 0}
+  bootsDefense: 0
+  bootsSpeed: 1
+--- !u!114 &1338925023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338924994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  armorSprite: {fileID: -432185661, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  defense: 0
+  goldValue: 2000
+  HelmetSR: {fileID: 0}
+  helmetDefense: 5
+  helmetDamgeBoost: 4
   ChestSR: {fileID: 0}
   chestDefense: 0
   healthRegen: 0
@@ -9917,6 +10165,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1751392393}
     m_Modifications:
+    - target: {fileID: 10437915313857354, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryWeapon
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 160306442924484012, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryWeapon
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 343860707388298780, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10037,6 +10293,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 3671457450390103512, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3705512875815263269, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Name
       value: Row (1)
@@ -10056,6 +10316,14 @@ PrefabInstance:
     - target: {fileID: 3896481596279410830, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4052402536793950116, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421000565106498449, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryWeapon
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4484936170262428717, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Pivot.x
@@ -10193,6 +10461,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 5870043981902655403, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6394488655886944959, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -10208,6 +10480,10 @@ PrefabInstance:
     - target: {fileID: 6394488655886944959, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6497218471652747348, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6766624881851228534, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Sprite
@@ -10233,6 +10509,14 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7630096001006325183, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryArmor
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769238351649002162, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryWeapon
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7790314357788334992, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10240,6 +10524,10 @@ PrefabInstance:
     - target: {fileID: 7790314357788334992, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462420547558471381, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
+      propertyPath: inventoryWeapon
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8640022766184010814, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
       propertyPath: m_AnchorMax.y
@@ -10308,168 +10596,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 181649412996196967, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1475200494}
-    - targetCorrespondingSourceObject: {fileID: 8488249931365349662, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1475200493}
-    - targetCorrespondingSourceObject: {fileID: 2027805747262967296, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1475200492}
-    - targetCorrespondingSourceObject: {fileID: 8633614554355597304, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1475200491}
-    - targetCorrespondingSourceObject: {fileID: 5381620257167427363, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1475200490}
-    - targetCorrespondingSourceObject: {fileID: 4973791009294858602, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 274241537}
-    - targetCorrespondingSourceObject: {fileID: 2775134835054850841, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1648791601}
-    - targetCorrespondingSourceObject: {fileID: 2168021873519481101, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 957345942}
-    - targetCorrespondingSourceObject: {fileID: 5749074901416106774, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 957345941}
-    - targetCorrespondingSourceObject: {fileID: 3305385175718589670, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 957345940}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
 --- !u!224 &1475200484 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4484936170262428717, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
   m_PrefabInstance: {fileID: 1475200483}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1475200485 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5381620257167427363, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 1475200483}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1475200486 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8633614554355597304, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 1475200483}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1475200487 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2027805747262967296, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 1475200483}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1475200488 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8488249931365349662, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 1475200483}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1475200489 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 181649412996196967, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 1475200483}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1475200490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475200485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponName: Shimmer
-  weaponType: Sword
-  weaponSprite: {fileID: -381588699, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  damage: 15
-  attackRate: 0.1
-  attackRange: 1.5
-  attackSweep: 140
-  goldValue: 2000
---- !u!114 &1475200491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475200486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponName: Flare
-  weaponType: Sword
-  weaponSprite: {fileID: 541388057, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  damage: 5
-  attackRate: 0.1
-  attackRange: 1.2
-  attackSweep: 120
-  goldValue: 500
---- !u!114 &1475200492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475200487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponName: Ray
-  weaponType: Sword
-  weaponSprite: {fileID: 442921765, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  damage: 3
-  attackRate: 0.3
-  attackRange: 1.2
-  attackSweep: 100
-  goldValue: 100
---- !u!114 &1475200493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475200488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponName: Pokey
-  weaponType: Sword
-  weaponSprite: {fileID: -748091526, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  damage: 2
-  attackRate: 0.5
-  attackRange: 1.2
-  attackSweep: 90
-  goldValue: 50
---- !u!114 &1475200494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475200489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cfce3f0aea64724d8aa7a55988373e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponName: Driftwood
-  weaponType: Sword
-  weaponSprite: {fileID: -748091526, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  damage: 1
-  attackRate: 0.5
-  attackRange: 1
-  attackSweep: 90
-  goldValue: 10
 --- !u!1 &1499698552
 GameObject:
   m_ObjectHideFlags: 0
@@ -10595,37 +10728,6 @@ MonoBehaviour:
   maxEnemies: 3
   spawnRadius: 5
   spawnCheckTime: 5
---- !u!1 &1518306362 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4973791009294858602, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 176085178}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1518306364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518306362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  armorSprite: {fileID: 991811098, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
-  defense: 0
-  goldValue: 10
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 1
-  bootsSpeed: 1
 --- !u!1 &1523183509
 GameObject:
   m_ObjectHideFlags: 0
@@ -11028,130 +11130,6 @@ MonoBehaviour:
   maxEnemies: 2
   spawnRadius: 2
   spawnCheckTime: 5
---- !u!1 &1648791600 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2775134835054850841, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 1475200483}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1648791601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648791600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 1
-  armorSprite: {fileID: -1560963372, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  defense: 0
-  goldValue: 100
-  HelmetSR: {fileID: 0}
-  helmetDefense: 0
-  helmetDamgeBoost: 1
-  ChestSR: {fileID: 0}
-  chestDefense: 3
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
---- !u!1 &1650937701 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3305385175718589670, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 419010159}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1650937702 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5749074901416106774, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 419010159}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1650937703 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2168021873519481101, guid: 236a052aa9175d64bb417acb77a5666c, type: 3}
-  m_PrefabInstance: {fileID: 419010159}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1650937704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650937701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  armorSprite: {fileID: -1257747533, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
-  defense: 0
-  goldValue: 2000
-  HelmetSR: {fileID: 0}
-  helmetDefense: 10
-  helmetDamgeBoost: 1.5
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
---- !u!114 &1650937705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650937702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  armorSprite: {fileID: 941875125, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
-  defense: 0
-  goldValue: 500
-  HelmetSR: {fileID: 0}
-  helmetDefense: 6
-  helmetDamgeBoost: 1.2
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
---- !u!114 &1650937706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650937703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca9fce198c4877b4ba9fb63177a3390e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  armorSprite: {fileID: -675666424, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
-  defense: 0
-  goldValue: 100
-  HelmetSR: {fileID: 0}
-  helmetDefense: 4
-  helmetDamgeBoost: 1.1
-  ChestSR: {fileID: 0}
-  chestDefense: 0
-  healthRegen: 0
-  damageReflect: 0
-  bootsSR: {fileID: 0}
-  bootsDefense: 0
-  bootsSpeed: 1
 --- !u!1 &1660032108
 GameObject:
   m_ObjectHideFlags: 0
@@ -14823,3 +14801,5 @@ SceneRoots:
   - {fileID: 2118997481}
   - {fileID: 313534960}
   - {fileID: 1660032109}
+  - {fileID: 179458368}
+  - {fileID: 1338924995}

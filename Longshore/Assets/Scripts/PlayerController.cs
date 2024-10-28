@@ -74,8 +74,11 @@ public class PlayerController : MonoBehaviourPun
 
     private void Start()
     {
-        inventory = GameObject.FindWithTag("Inventory");
-        inventory.SetActive(false);
+        if(this == me)
+        {
+            inventory = GameObject.FindWithTag("Inventory");
+            inventory.SetActive(false);
+        }
     }
 
     private void Update()

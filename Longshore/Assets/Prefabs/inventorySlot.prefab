@@ -221,4 +221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f09efd1cf0fdd164fbfc450f81db4a67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryWeapon: -1
+  inventoryArmor: -1
   isFilled: 0

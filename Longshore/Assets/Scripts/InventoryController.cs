@@ -19,29 +19,21 @@ public class InventoryController : MonoBehaviourPun
         slots = gameObject.GetComponentsInChildren<InventorySlotController>();
     }
 
-    //make this an rpc
-    [PunRPC]
-    public void AddItem(WeaponData data)
+
+    public void AddItem(int index, bool isArmor)
     {
         for(int i = 0; i < slots.Length; i++)
         {
             if(!slots[i].isFilled)
             {
-                slots[i].SetInventorySlot(data);
-                return;
-            }
-        }
-        Debug.Log("Inventory Full");
-    }
-
-    [PunRPC]
-    public void AddItem(ArmorData data)
-    {
-        for (int i = 0; i < slots.Length; i++)
-        {
-            if (!slots[i].isFilled)
-            {
-                slots[i].SetInventorySlot(data);
+                if (isArmor)
+                {
+                    slots[i].SetInventorySlotArmor(index);
+                }
+                else
+                {
+                    slots[i].SetInventorySlot(index);
+                }
                 return;
             }
         }

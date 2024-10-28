@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 public enum ArmorType
 {
     helmet,
@@ -8,7 +9,7 @@ public enum ArmorType
     boots
 }
 
-public class ArmorData : MonoBehaviour
+public class ArmorData : MonoBehaviourPun
 {
     [Header("General")]
     public ArmorType type;
@@ -29,9 +30,10 @@ public class ArmorData : MonoBehaviour
     public int bootsDefense = 0;
     public float bootsSpeed = 1;
     
-
-    public void GetChestArmor(ArmorData data)
+    [PunRPC]
+    public void GetChestArmor(int index)
     {
+        ArmorData data = ArmorCatalogue.catalogue[index];
         chestDefense = data.chestDefense;
         healthRegen = data.healthRegen;
         damageReflect = data.damageReflect;
@@ -48,8 +50,10 @@ public class ArmorData : MonoBehaviour
         ChestSR.sprite = data.armorSprite;
     }
 
-    public void GetBoots(ArmorData data)
+    [PunRPC]
+    public void GetBoots(int index)
     {
+        ArmorData data = ArmorCatalogue.catalogue[index];
         bootsDefense = data.bootsDefense;
         bootsSpeed = data.bootsSpeed;
 
@@ -64,8 +68,11 @@ public class ArmorData : MonoBehaviour
 
         bootsSR.sprite = data.armorSprite;
     }
-    public void GetHelmet(ArmorData data)
+
+    [PunRPC]
+    public void GetHelmet(int index)
     {
+        ArmorData data = ArmorCatalogue.catalogue[index];
         helmetDefense = data.helmetDefense;
         helmetDamgeBoost = data.helmetDamgeBoost;
 
