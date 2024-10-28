@@ -46,10 +46,8 @@ public class Pickup : MonoBehaviourPun
                 inventory.photonView.RPC("AddItem", player.photonPlayer,data);
             }
 
-            else
-            {
-                PhotonNetwork.Destroy(gameObject);
-            }
+            PhotonNetwork.Destroy(gameObject);
+            
         }
     }
 }

@@ -1240,7 +1240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  armorSprite: {fileID: 1758912337, guid: 4ed575b12c8986841bfb0a2297dd0115, type: 3}
+  armorSprite: {fileID: -1785899103, guid: 0f76d1c9ba5c1be4dab9ab3f3e4d54c1, type: 3}
   defense: 0
   goldValue: 500
   HelmetSR: {fileID: 0}
@@ -5838,7 +5838,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1193514691}
   m_HandleRect: {fileID: 1193514690}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
