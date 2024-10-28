@@ -147,7 +147,7 @@ public class PlayerController : MonoBehaviourPun
         //setting velocity
         rig.velocity = new Vector2(x, y) * moveSpeed * armor.bootsSpeed;
     }
-
+    /*
     [PunRPC]
     public void TakeDamage(float damageTaken, Enemy attacker)
     {
@@ -179,12 +179,12 @@ public class PlayerController : MonoBehaviourPun
             }
         }
     }
-
+    */
     //this is to avoid double reflections
     [PunRPC]
     public void TakeDamage(float damageTaken)
     {
-        Debug.Log(armor.defense);
+        //Debug.Log(armor.defense);
         damageTaken = Mathf.Clamp(damageTaken - armor.defense, 0, damageTaken);
         curHp -= damageTaken;
 
